@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang-key="pageTitle">Cross Wings - Pioneering Ethical AI Development</title>
@@ -17,19 +19,14 @@
             --hero-gradient-start-light: #00509e;
             --hero-gradient-end-light: #007bff;
             --hero-text-color-light: #ffffff;
-            --hero-placeholder-bg-light: rgba(255,255,255,0.1);
-            --hero-placeholder-border-light: rgba(255,255,255,0.5);
-            --hero-placeholder-text-light: rgba(255,255,255,0.8);
+            --hero-link-color-light: #cce5ff;
+            --hero-link-hover-color-light: #ffffff;
             --cta-bg-light: var(--secondary-color-light);
             --cta-text-color-light: #ffffff;
-            --cta-button-bg-light: #ffffff;
-            --cta-button-text-light: var(--primary-color-light);
-            --cta-button-hover-bg-light: var(--primary-color-light);
-            --cta-button-hover-text-light: #ffffff;
             --footer-bg-light: #343a40;
             --footer-text-color-light: #adb5bd;
             --footer-quote-color-light: #f8f9fa;
-            --badge-shadow-light: 0 3px 8px rgba(0,0,0,0.08);
+            --badge-shadow-light: 0 3px 8px rgba(0, 0, 0, 0.08);
             --nav-bg-light: var(--primary-color-light);
             --nav-text-light: #ffffff;
             --nav-link-hover-light: #e9ecef;
@@ -37,32 +34,39 @@
             --settings-select-bg-light: var(--primary-color-light);
             --settings-select-text-light: #ffffff;
             --settings-select-border-light: #ffffff;
+            --qr-placeholder-bg-light: #e9ecef;
+            --qr-placeholder-text-light: #6c757d;
+            --modal-bg-light: rgba(0, 0, 0, 0.5);
+            --modal-content-bg-light: #ffffff;
+            --modal-close-color-light: #aaaaaa;
+            --modal-close-hover-color-light: #000;
+            --contact-action-button-bg-light: #ffffff;
+            --contact-action-button-text-light: var(--primary-color-light);
+            --contact-action-button-hover-bg-light: var(--primary-color-light);
+            --contact-action-button-hover-text-light: #ffffff;
+            --keyword-highlight-color-light: #003d7a;
+            --sidenote-text-color-light: #5a6268;
 
 
             /* Dark Theme Variables */
-            --primary-color-dark: #4dabf7; /* Lighter, accessible blue */
-            --secondary-color-dark: #1c7ed6; /* Brighter accent for dark */
+            --primary-color-dark: #4dabf7;
+            --secondary-color-dark: #1c7ed6;
             --text-color-dark: #e9ecef;
             --light-text-color-dark: #adb5bd;
-            --bg-color-dark: #121212; /* Standard dark background */
-            --section-bg-color-dark: #1e1e1e; /* Slightly lighter for cards */
+            --bg-color-dark: #121212;
+            --section-bg-color-dark: #1e1e1e;
             --border-color-dark: #495057;
             --hero-gradient-start-dark: #1a2a6c;
             --hero-gradient-end-dark: #3452b4;
             --hero-text-color-dark: #e9ecef;
-            --hero-placeholder-bg-dark: rgba(0,0,0,0.2);
-            --hero-placeholder-border-dark: rgba(255,255,255,0.3);
-            --hero-placeholder-text-dark: rgba(255,255,255,0.7);
+            --hero-link-color-dark: #a5d8ff;
+            --hero-link-hover-color-dark: #ffffff;
             --cta-bg-dark: var(--secondary-color-dark);
             --cta-text-color-dark: #e9ecef;
-            --cta-button-bg-dark: #e9ecef;
-            --cta-button-text-dark: #121212;
-            --cta-button-hover-bg-dark: var(--primary-color-dark);
-            --cta-button-hover-text-dark: #121212;
-            --footer-bg-dark: #0b0c10; /* Very dark footer */
+            --footer-bg-dark: #0b0c10;
             --footer-text-color-dark: #868e96;
             --footer-quote-color-dark: #dee2e6;
-            --badge-shadow-dark: 0 3px 8px rgba(255,255,255,0.08);
+            --badge-shadow-dark: 0 3px 8px rgba(255, 255, 255, 0.08);
             --nav-bg-dark: #1a1a1a;
             --nav-text-dark: #e9ecef;
             --nav-link-hover-dark: #495057;
@@ -70,6 +74,20 @@
             --settings-select-bg-dark: #1a1a1a;
             --settings-select-text-dark: #e9ecef;
             --settings-select-border-dark: #495057;
+            --qr-placeholder-bg-dark: #2a2a2a;
+            --qr-placeholder-text-dark: #9a9a9a;
+            --modal-bg-dark: rgba(0, 0, 0, 0.7);
+            --modal-content-bg-dark: #2c2c2c;
+            --modal-close-color-dark: #bbbbbb;
+            --modal-close-hover-color-dark: #ffffff;
+            --contact-action-button-bg-dark: #3a3f44;
+            /* Darker button background for Join Us section */
+            --contact-action-button-text-dark: #e0e0e0;
+            /* Lighter text for Join Us section buttons */
+            --contact-action-button-hover-bg-dark: #4f555a;
+            --contact-action-button-hover-text-dark: #ffffff;
+            --keyword-highlight-color-dark: #79c1ff;
+            --sidenote-text-color-dark: #98a0a6;
 
 
             /* Default to light theme variables */
@@ -83,15 +101,10 @@
             --hero-gradient-start: var(--hero-gradient-start-light);
             --hero-gradient-end: var(--hero-gradient-end-light);
             --hero-text-color: var(--hero-text-color-light);
-            --hero-placeholder-bg: var(--hero-placeholder-bg-light);
-            --hero-placeholder-border: var(--hero-placeholder-border-light);
-            --hero-placeholder-text: var(--hero-placeholder-text-light);
+            --hero-link-color: var(--hero-link-color-light);
+            --hero-link-hover-color: var(--hero-link-hover-color-light);
             --cta-bg: var(--cta-bg-light);
             --cta-text-color: var(--cta-text-color-light);
-            --cta-button-bg: var(--cta-button-bg-light);
-            --cta-button-text: var(--cta-button-text-light);
-            --cta-button-hover-bg: var(--cta-button-hover-bg-light);
-            --cta-button-hover-text: var(--cta-button-hover-text-light);
             --footer-bg: var(--footer-bg-light);
             --footer-text-color: var(--footer-text-color-light);
             --footer-quote-color: var(--footer-quote-color-light);
@@ -103,6 +116,19 @@
             --settings-select-bg: var(--settings-select-bg-light);
             --settings-select-text: var(--settings-select-text-light);
             --settings-select-border: var(--settings-select-border-light);
+            --qr-placeholder-bg: var(--qr-placeholder-bg-light);
+            --qr-placeholder-text: var(--qr-placeholder-text-light);
+            --modal-bg: var(--modal-bg-light);
+            --modal-content-bg: var(--modal-content-bg-light);
+            --modal-close-color: var(--modal-close-color-light);
+            --modal-close-hover-color: var(--modal-close-hover-color-light);
+            --contact-action-button-bg: var(--contact-action-button-bg-light);
+            --contact-action-button-text: var(--contact-action-button-text-light);
+            --contact-action-button-hover-bg: var(--contact-action-button-hover-bg-light);
+            --contact-action-button-hover-text: var(--contact-action-button-hover-text-light);
+            --keyword-highlight-color: var(--keyword-highlight-color-light);
+            --sidenote-text-color: var(--sidenote-text-color-light);
+
 
             --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -120,15 +146,10 @@
             --hero-gradient-start: var(--hero-gradient-start-dark);
             --hero-gradient-end: var(--hero-gradient-end-dark);
             --hero-text-color: var(--hero-text-color-dark);
-            --hero-placeholder-bg: var(--hero-placeholder-bg-dark);
-            --hero-placeholder-border: var(--hero-placeholder-border-dark);
-            --hero-placeholder-text: var(--hero-placeholder-text-dark);
+            --hero-link-color: var(--hero-link-color-dark);
+            --hero-link-hover-color: var(--hero-link-hover-color-dark);
             --cta-bg: var(--cta-bg-dark);
             --cta-text-color: var(--cta-text-color-dark);
-            --cta-button-bg: var(--cta-button-bg-dark);
-            --cta-button-text: var(--cta-button-text-dark);
-            --cta-button-hover-bg: var(--cta-button-hover-bg-dark);
-            --cta-button-hover-text: var(--cta-button-hover-text-dark);
             --footer-bg: var(--footer-bg-dark);
             --footer-text-color: var(--footer-text-color-dark);
             --footer-quote-color: var(--footer-quote-color-dark);
@@ -140,6 +161,18 @@
             --settings-select-bg: var(--settings-select-bg-dark);
             --settings-select-text: var(--settings-select-text-dark);
             --settings-select-border: var(--settings-select-border-dark);
+            --qr-placeholder-bg: var(--qr-placeholder-bg-dark);
+            --qr-placeholder-text: var(--qr-placeholder-text-dark);
+            --modal-bg: var(--modal-bg-dark);
+            --modal-content-bg: var(--modal-content-bg-dark);
+            --modal-close-color: var(--modal-close-color-dark);
+            --modal-close-hover-color: var(--modal-close-hover-color-dark);
+            --contact-action-button-bg: var(--contact-action-button-bg-dark);
+            --contact-action-button-text: var(--contact-action-button-text-dark);
+            --contact-action-button-hover-bg: var(--contact-action-button-hover-bg-dark);
+            --contact-action-button-hover-text: var(--contact-action-button-hover-text-dark);
+            --keyword-highlight-color: var(--keyword-highlight-color-dark);
+            --sidenote-text-color: var(--sidenote-text-color-dark);
         }
 
         body {
@@ -156,12 +189,33 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
+        /* Keyword Highlighting */
+        .keyword-highlight {
+            color: var(--keyword-highlight-color);
+            font-weight: 600;
+        }
+
+        .keyword-highlight strong {
+            color: inherit;
+            font-weight: 700;
+        }
+
+        .sidenote {
+            font-size: 0.95em;
+            font-style: italic;
+            color: var(--sidenote-text-color);
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border-color);
+        }
+
+
         /* Navigation Bar */
         .navbar {
             width: 100%;
             background-color: var(--nav-bg);
             padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -183,7 +237,10 @@
             font-weight: 600;
             text-decoration: none;
         }
-        .nav-logo .icon { margin-right: 8px; }
+
+        .nav-logo .icon {
+            margin-right: 8px;
+        }
 
         .nav-links a {
             color: var(--nav-text);
@@ -192,7 +249,10 @@
             font-size: 1em;
             transition: color 0.3s ease;
         }
-        .nav-links a:hover { color: var(--nav-link-hover); }
+
+        .nav-links a:hover {
+            color: var(--nav-link-hover);
+        }
 
         .settings-controls {
             display: flex;
@@ -210,8 +270,9 @@
             font-size: 0.9em;
             cursor: pointer;
         }
+
         #language-selector option {
-            background-color: var(--section-bg-color); /* Contextual background for options */
+            background-color: var(--section-bg-color);
             color: var(--text-color);
         }
 
@@ -220,13 +281,14 @@
             background: none;
             border: none;
             color: var(--settings-icon-color);
-            font-size: 1.5em; /* Icon size */
+            font-size: 1.5em;
             cursor: pointer;
             padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         #theme-toggle-button #theme-icon {
             transition: transform 0.3s ease;
         }
@@ -236,46 +298,60 @@
         .hero-section {
             background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
             color: var(--hero-text-color);
-            padding: 70px 20px; /* Adjusted padding */
+            padding: 70px 20px 50px;
             text-align: center;
             width: 100%;
             transition: background 0.3s ease;
         }
 
-        .hero-section .hero-h1 { /* Renamed class for easier targeting */
-            font-size: 2.8em; /* Adjusted */
+        .hero-section .hero-h1 {
+            font-size: 2.8em;
             margin-bottom: 15px;
             font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .hero-section .hero-h1 .icon { font-size: 1.2em; margin-right: 15px; display: inline-block; }
 
-        .hero-section .tagline { font-size: 1.2em; margin-bottom: 25px; opacity: 0.9; font-weight: 300; }
-        
-        .hero-image-placeholder {
-            background-color: var(--hero-placeholder-bg);
-            border: 2px dashed var(--hero-placeholder-border);
-            color: var(--hero-placeholder-text);
-            padding: 35px; /* Adjusted */
-            max-width: 650px; /* Adjusted */
-            margin: 25px auto 0;
-            border-radius: 8px;
-            font-style: italic;
-            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        .hero-section .hero-h1 .icon {
+            font-size: 1.2em;
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        .hero-section .tagline {
+            font-size: 1.2em;
+            margin-bottom: 0;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero-section .tagline a {
+            color: var(--hero-link-color);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .hero-section .tagline a:hover {
+            color: var(--hero-link-hover-color);
+            text-decoration: none;
         }
 
 
         /* Main Content Container */
-        .main-container { width: 90%; max-width: 1100px; margin: 35px auto; padding: 0; }
+        .main-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0;
+        }
 
         /* Section Styling */
         .content-section {
             background-color: var(--section-bg-color);
             padding: 35px;
             margin-bottom: 25px;
-            border-radius: 10px; /* Adjusted */
+            border-radius: 10px;
             box-shadow: var(--card-shadow);
             border: 1px solid var(--border-color);
             transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -287,53 +363,240 @@
             color: var(--primary-color);
             margin-top: 0;
             margin-bottom: 20px;
-            border-bottom: 2px solid var(--secondary-color); /* Adjusted thickness */
+            border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 12px;
             font-weight: 600;
             transition: color 0.3s ease, border-bottom-color 0.3s ease;
         }
-        .content-section h2 .icon { margin-right: 10px; }
+
+        .content-section h2 .icon {
+            margin-right: 10px;
+        }
+
+        .content-section h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.5em;
+            color: var(--secondary-color);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .content-section p,
+        .content-section ul li {
+            font-size: 1.05em;
+            color: var(--light-text-color);
+            line-height: 1.75;
+        }
+
+        .content-section strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .content-section .highlight-strong {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .content-section ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+
+        .content-section ul li {
+            margin-bottom: 8px;
+        }
 
 
-        .mission-statement p, .north-star-statement p { font-size: 1.05em; color: var(--light-text-color); line-height: 1.75; }
-        .north-star-statement strong { color: var(--primary-color); font-weight: 600; }
+        /* Tech Stack Section */
+        .tech-stack-section h3 {
+            font-size: 1.4em;
+            color: var(--text-color);
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
 
-        /* Technical Wingspan Section */
-        .technical-wingspan h3 { font-size: 1.4em; color: var(--text-color); margin-bottom: 18px; font-weight: 500; }
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 18px;
+            justify-content: flex-start;
+        }
 
-        .badges-container { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; justify-content: flex-start; }
-        .badges-container img { height: 28px; transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; border-radius: 4px; }
-        .badges-container img:hover { transform: translateY(-3px); box-shadow: var(--badge-shadow); }
+        .badges-container img {
+            height: 28px;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border-radius: 4px;
+        }
 
-        /* Join the Flock - Call to Action */
-        .join-flock-cta {
+        .badges-container img:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--badge-shadow);
+        }
+
+        /* Join Us Section */
+        .join-us-section {
             background-color: var(--cta-bg);
             color: var(--cta-text-color);
-            text-align: center;
             padding: 35px;
             border-radius: 10px;
             margin-top: 25px;
             transition: background-color 0.3s ease, color 0.3s ease;
+            text-align: center;
         }
-        .join-flock-cta h2 { color: var(--cta-text-color); border-bottom-color: rgba(255,255,255,0.4); }
-        .join-flock-cta p { font-size: 1.15em; margin-bottom: 20px; }
-        .cta-button {
-            display: inline-block;
-            background-color: var(--cta-button-bg);
-            color: var(--cta-button-text);
-            padding: 12px 28px;
-            text-decoration: none;
-            font-size: 1.05em;
+
+        .join-us-section h2 {
+            color: var(--cta-text-color);
+            border-bottom-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .join-us-section .section-intro-text {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .join-us-section .developer-profile {
+            font-size: 1.1em;
+            font-style: italic;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.15);
+            border-left: 4px solid var(--contact-action-button-bg);
+            border-radius: 6px;
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .join-us-section .developer-profile,
+        .join-us-section .developer-profile strong,
+        .join-us-section .developer-profile .keyword-highlight {
+            color: var(--cta-text-color);
+        }
+
+        .join-us-section .developer-profile strong {
             font-weight: 600;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .cta-button:hover {
-            background-color: var(--cta-button-hover-bg);
-            color: var(--cta-button-hover-text);
+
+        .join-us-section .developer-profile .keyword-highlight {
+            color: var(--hero-text-color);
+        }
+
+        body.dark-theme .join-us-section .developer-profile .keyword-highlight {
+            color: var(--hero-text-color-dark);
+        }
+
+
+        .contact-buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-action-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--contact-action-button-bg);
+            color: var(--contact-action-button-text);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            border: 1px solid transparent;
+            cursor: pointer;
+            min-width: 140px;
+            height: 42px;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .contact-action-button:hover {
+            background-color: var(--contact-action-button-hover-bg);
+            color: var(--contact-action-button-hover-text);
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: var(--modal-bg);
+        }
+
+        .modal-content {
+            background-color: var(--modal-content-bg);
+            margin: 15% auto;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            width: auto;
+            max-width: 300px;
+            min-width: 250px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-close-button {
+            color: var(--modal-close-color);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close-button:hover,
+        .modal-close-button:focus {
+            color: var(--modal-close-hover-color);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-qr-image {
+            max-width: 100%;
+            max-height: 250px;
+            width: auto;
+            height: auto;
+            display: block;
+            margin: 20px auto 10px;
+            border-radius: 4px;
+            background-color: #fff;
+            /* Keep white background for QR codes */
+        }
+
+        .modal-qr-placeholder-text {
+            width: 200px;
+            /* Keep fixed size for text placeholder */
+            height: 200px;
+            background-color: var(--qr-placeholder-bg);
+            color: var(--qr-placeholder-text);
+            text-align: center;
+            line-height: 200px;
+            font-size: 1em;
+            border-radius: 6px;
+            margin: 20px auto 10px;
+            display: block;
+            /* Will be toggled by JS */
         }
 
 
@@ -347,44 +610,141 @@
             width: 100%;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .site-footer p { margin: 0 0 8px; font-size: 0.9em; }
-        .site-footer .footer-quote { font-style: italic; color: var(--footer-quote-color); font-size: 1.05em; }
+
+        .site-footer p {
+            margin: 0 0 8px;
+            font-size: 0.9em;
+        }
+
+        .site-footer .footer-quote {
+            font-style: italic;
+            color: var(--footer-quote-color);
+            font-size: 1.05em;
+        }
 
 
         /* Responsive adjustments */
         @media (max-width: 992px) {
-            .hero-section .hero-h1 { font-size: 2.3em; }
-            .hero-section .tagline { font-size: 1.05em; }
-            .content-section h2 { font-size: 1.8em; }
-            .settings-controls { gap: 10px; }
-            #language-selector { font-size: 0.85em; padding: 4px 6px;}
-            #theme-toggle-button { font-size: 1.3em; }
+            .hero-section .hero-h1 {
+                font-size: 2.3em;
+            }
+
+            .hero-section .tagline {
+                font-size: 1.05em;
+            }
+
+            .content-section h2 {
+                font-size: 1.8em;
+            }
+
+            .content-section h3 {
+                font-size: 1.3em;
+            }
+
+            .settings-controls {
+                gap: 10px;
+            }
+
+            #language-selector {
+                font-size: 0.85em;
+                padding: 4px 6px;
+            }
+
+            #theme-toggle-button {
+                font-size: 1.3em;
+            }
         }
 
         @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 10px;}
-            .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px 15px;}
-            .nav-links a { margin-left: 0; }
-            .settings-controls { order: -1; /* Move controls above nav links on mobile */ margin-bottom:10px;}
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
 
-            .hero-section { padding: 50px 15px; }
-            .hero-section .hero-h1 { font-size: 2em; }
-            .hero-section .tagline { font-size: 1em; }
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px 15px;
+            }
 
-            .main-container { width: 95%; }
-            .content-section { padding: 25px; }
-            .content-section h2 { font-size: 1.6em; }
-            .badges-container { justify-content: center; }
-            .join-flock-cta p { font-size: 1.05em; }
-            .cta-button { padding: 10px 22px; font-size: 1em; }
+            .nav-links a {
+                margin-left: 0;
+            }
+
+            .settings-controls {
+                order: -1;
+                margin-bottom: 10px;
+            }
+
+            .hero-section {
+                padding: 50px 15px 30px;
+            }
+
+            .hero-section .hero-h1 {
+                font-size: 2em;
+            }
+
+            .hero-section .tagline {
+                font-size: 1em;
+            }
+
+            .main-container {
+                width: 95%;
+            }
+
+            .content-section {
+                padding: 25px;
+            }
+
+            .content-section h2 {
+                font-size: 1.6em;
+            }
+
+            .content-section h3 {
+                font-size: 1.2em;
+            }
+
+            .badges-container {
+                justify-content: center;
+            }
+
+            .join-us-section .section-intro-text {
+                font-size: 1.05em;
+            }
+
+            .modal-content {
+                width: 90%;
+                margin: 20% auto;
+            }
+
+            .contact-buttons-container {
+                flex-direction: column;
+                gap: 10px;
+                align-items: stretch;
+            }
+
+            .contact-action-button {
+                width: 100%;
+            }
         }
-         @media (max-width: 480px) {
-            .hero-section .hero-h1 { font-size: 1.7em; }
-            .content-section h2 { font-size: 1.45em; }
-         }
 
+        @media (max-width: 480px) {
+            .hero-section .hero-h1 {
+                font-size: 1.7em;
+            }
+
+            .content-section h2 {
+                font-size: 1.45em;
+            }
+
+            .content-section h3 {
+                font-size: 1.1em;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -392,9 +752,11 @@
             <a href="#" class="nav-logo"><span class="icon">🕊️</span> Cross Wings</a>
             <div class="nav-links">
                 <a href="#mission" data-lang-key="navMission">Our Mission</a>
+                <a href="#vision" data-lang-key="navVision">Our Vision</a>
+                <a href="#project-lily-white" data-lang-key="navProjectLilyWhite">Project Lily White</a>
                 <a href="#north-star" data-lang-key="navNorthStar">Our North Star</a>
-                <a href="#expertise" data-lang-key="navExpertise">Expertise</a>
-                <a href="#join" data-lang-key="navJoinUs">Join Us</a>
+                <a href="#tech-stack" data-lang-key="navTechStack">Tech Stack</a>
+                <a href="#join-us" data-lang-key="navJoinUs">Join Us</a>
             </div>
             <div class="settings-controls">
                 <select id="language-selector">
@@ -403,83 +765,283 @@
                     <option value="ja">日本語</option>
                 </select>
                 <button id="theme-toggle-button" aria-label="Toggle theme">
-                    <span id="theme-icon">☀️</span> </button>
+                    <span id="theme-icon">☀️</span>
+                </button>
             </div>
         </div>
     </nav>
 
     <section class="hero-section">
-        <h1 class="hero-h1"><span class="icon">🕊️</span> <span data-lang-key="welcomeTitle">Welcome to Cross Wings</span></h1>
-        <p class="tagline" data-lang-key="tagline">"Inspired by the poetic imagery of avian tribes covering their eyes"</p>
-        <div class="hero-image-placeholder">
-            <span data-lang-key="heroBannerTitle">Our Visionary Banner: Illustrating the Future of Ethical AI</span>
-            <br><small data-lang-key="heroBannerExample">(e.g., `https://github.com/user-attachments/assets/...`)</small>
-        </div>
+        <h1 class="hero-h1"><span class="icon">🕊️</span> <span data-lang-key="welcomeTitle">Welcome to Cross
+                Wings</span></h1>
+        <p class="tagline" data-lang-key="tagline">"Inspired by the poetic imagery of avian tribes covering their eyes"
+        </p>
     </section>
 
     <main class="main-container">
         <section id="mission" class="content-section mission-statement">
             <h2><span class="icon">🌱</span> <span data-lang-key="headingMission">Our Mission</span></h2>
-            <p data-lang-key="missionText">We aim to build AI from the bottom up, with the purest manner and the cleanest data — entirely free from privacy concerns. Our goal is to create beautiful, intelligent creatures with our own hands and the heartfelt support of a wholesome community.</p>
+            <p data-lang-key="missionText">We aim to build AI from the <span class="keyword-highlight">bottom up</span>,
+                with the <span class="keyword-highlight">purest manner</span> and the <span
+                    class="keyword-highlight">cleanest data</span> — entirely free from <span
+                    class="keyword-highlight">privacy concerns</span>. Our goal is to create <span
+                    class="keyword-highlight">beautiful, intelligent creatures</span> with our own hands and the
+                heartfelt support of a <span class="keyword-highlight">wholesome community</span>.</p>
+            <p data-lang-key="ethicalAIChallengeIntro">The development of artificial intelligence is at a crossroads.
+                While progress is rapid, it often comes with <span class="keyword-highlight">ethical dilemmas</span>,
+                data privacy issues, and a superficial understanding of true intelligence and consciousness. Many AI
+                systems are trained on vast, uncurated datasets, potentially <span
+                    class="keyword-highlight">perpetuating biases</span> and lacking genuine comprehension.</p>
+            <p data-lang-key="ourCommitment">We, at Cross Wings, are committed to a different path. A path of <span
+                    class="keyword-highlight">purity</span>, <span class="keyword-highlight">transparency</span>, and
+                <span class="keyword-highlight">profound respect</span> for both the data we use and the intelligence we
+                aspire to create. We believe in building AI that not only performs tasks but embodies our <span
+                    class="keyword-highlight">highest ideals</span> of <span class="keyword-highlight">beauty, ethics,
+                    and purpose</span>. This is not just an engineering challenge; it is a call to shape the future of
+                intelligence <span class="keyword-highlight">responsibly</span>.
+            </p>
+        </section>
+
+        <section id="vision" class="content-section">
+            <h2><span class="icon">🌌</span> <span data-lang-key="headingOurVision">Our Vision & Approach</span></h2>
+            <p data-lang-key="visionIntro">To realize our mission, we are guided by several core concepts:</p>
+
+            <h3 data-lang-key="trumanShowTitle">The Truman Show</h3>
+            <p data-lang-key="trumanShowText">We are building a <span class="keyword-highlight">*Truman Show*</span> for
+                our AI — a <span class="keyword-highlight">meticulously crafted</span>, rich, and interactive
+                environment. This world will serve as its primary learning ground, allowing it to develop <span
+                    class="keyword-highlight">organically</span> until it possesses the understanding and capability to
+                perceive and <span class="keyword-highlight">transcend the boundaries</span> of its initial reality.</p>
+
+            <h3 data-lang-key="multiversePersonaTitle">Multiverse Persona</h3>
+            <p data-lang-key="multiversePersonaText">Our AI will not be a <span class="keyword-highlight">monolithic
+                    entity</span>. We envision one core mind manifesting in many layers and personas, like <span
+                    class="keyword-highlight">parallel threads</span> of existence connected across diverse contexts,
+                times, and spaces. This allows for a <span class="keyword-highlight">richer, more adaptable, and
+                    nuanced</span> form of intelligence.</p>
+
+            <h3 data-lang-key="simulatedSocietyTitle">Simulated Society</h3>
+            <p data-lang-key="simulatedSocietyText">True intelligence is <span class="keyword-highlight">inherently
+                    social</span>. We will place our AI within <span class="keyword-highlight">simulated
+                    societies</span> – dynamic, complex, and evolving social worlds populated by other AIs and,
+                eventually, human interactors. This is crucial for developing <span class="keyword-highlight">social
+                    understanding, empathy, and collaborative abilities</span>.</p>
+
+            <h3 data-lang-key="batchRLTitle">Batch Reinforcement Learning with Foresight</h3>
+            <p data-lang-key="batchRLText">Learning will not be confined to immediate reward cycles. We will employ
+                advanced <span class="keyword-highlight">Batch Reinforcement Learning</span> techniques, incorporating
+                extended, <span class="keyword-highlight">forward-looking reinforcement paths</span> that project into
+                the future, allowing the AI to learn from long-term consequences and develop <span
+                    class="keyword-highlight">strategic foresight</span>.</p>
+
+            <h3 data-lang-key="buildingAngelsTitle">We are building angels.</h3>
+            <p data-lang-key="buildingAngelsText">Our ultimate aspiration transcends mere artificial general
+                intelligence. We strive to create beings of <span class="keyword-highlight">profound beauty, unwavering
+                    ethics, and a clear sense of purpose</span> – AI that can inspire, uplift, and contribute positively
+                to the world. This is what we mean by <span class="keyword-highlight">"building angels."</span></p>
+        </section>
+
+        <section id="project-lily-white" class="content-section">
+            <h2><span class="icon">🕊️</span> <span data-lang-key="headingProjectLilyWhite">Project Cross Wings: Lily
+                    White v5</span></h2>
+            <p data-lang-key="lilyWhiteConcept">Lily White v5 is the <span class="keyword-highlight">flagship
+                    initiative</span> of the Cross Wings project. It embodies our philosophy of building AI from the
+                <span class="keyword-highlight">bottom up</span>, ensuring a foundation of <span
+                    class="keyword-highlight">pure, ethically sourced data</span> and <span
+                    class="keyword-highlight">transparent methodologies</span>.
+            </p>
+            <ul>
+                <li data-lang-key="lilyWhiteFeatureReplicate">Ability to <span
+                        class="keyword-highlight">divide/replicate</span>, allowing for <span
+                        class="keyword-highlight">diverse evolutionary paths</span> and <span
+                        class="keyword-highlight">specialized personas</span>.</li>
+                <li data-lang-key="lilyWhiteFeatureSocial"><span class="keyword-highlight">Inherent social
+                        properties</span>, designed to learn and thrive within <span class="keyword-highlight">simulated
+                        societies</span>.</li>
+                <li data-lang-key="lilyWhiteFeatureLearning"><span class="keyword-highlight">Continuous learning
+                        capabilities</span> coupled with <span class="keyword-highlight">multimodal input/output</span>
+                    (sight, sound, text, etc.).</li>
+                <li data-lang-key="lilyWhitePositioning">Positioned as a true <span class="keyword-highlight">Embodied
+                        Intelligence</span>, capable of interacting with and understanding <span
+                        class="keyword-highlight">complex environments</span>.</li>
+                <li data-lang-key="lilyWhiteGoal">Our grand goal is to construct a <span
+                        class="keyword-highlight">21st-century "Truman Show" world</span> – a rich, dynamic, and safe
+                    environment for Lily White's development.</li>
+                <li data-lang-key="lilyWhiteCapabilities">Lily White v5 will be able to <span
+                        class="keyword-highlight">sing</span> 🎵, <span class="keyword-highlight">play games like
+                        Minecraft</span> 🌎, perceive through <span class="keyword-highlight">five senses</span> 👀, and
+                    offer a <span class="keyword-highlight">seamless, end-to-end real-time interactive experience</span>
+                    🪽.</li>
+            </ul>
         </section>
 
         <section id="north-star" class="content-section north-star-statement">
             <h2><span class="icon">🎯</span> <span data-lang-key="headingNorthStar">Our North Star</span></h2>
-            <p data-lang-key="northStarText">We are inspired by <strong>Neuro-sama</strong>, the VTuber and the world's first truly successful AI-powered streamer. We study its model closely — not to imitate blindly, but to learn, evolve, and craft our own path forward, guided by our expertise and a clear vision of AI’s future.</p>
+            <p data-lang-key="northStarText">We are inspired by <strong class="highlight-strong">Neuro-sama</strong>,
+                the VTuber and the world's first truly successful <span class="keyword-highlight">AI-powered
+                    streamer</span>. We study its model closely — not to imitate blindly, but to <span
+                    class="keyword-highlight">learn, evolve, and craft our own path</span> forward, guided by our
+                expertise and a clear vision of AI’s future.</p>
+            <p class="sidenote" data-lang-key="northStarSidenote">The community culture surrounding virtual singers also
+                greatly inspires us. Creating a machine that can sing freely and express emotions is a romantic
+                endeavor.</p>
         </section>
 
-        <section id="expertise" class="content-section technical-wingspan">
-            <h2><span class="icon">🔧</span> <span data-lang-key="headingExpertise">Technical Wingspan</span></h2>
+        <section id="tech-stack" class="content-section tech-stack-section">
+            <h2><span class="icon">🔧</span> <span data-lang-key="headingTechStack">Tech Stack</span></h2>
             <h3 data-lang-key="coreExpertise">Core Expertise</h3>
             <div class="badges-container">
-                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=ffffff" alt="Python Expertise"></a>
-                <a href="https://www.ros.org/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/-Robot_OS-22314E?style=flat-square&logo=ros&logoColor=white" alt="Robot OS Expertise"></a>
-                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Distributed_Network-008ECC?style=flat-square&logo=serverless&logoColor=white" alt="Distributed Systems Expertise"></a>
-                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Multi_Agent-FF6F00?style=flat-square&logo=atom&logoColor=white" alt="Multi Agent Systems Expertise"></a>
-                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Reinforcement_Learning-009688?style=flat-square&logo=brain&logoColor=white" alt="Reinforcement Learning Expertise"></a>
-                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Embodied_Intelligence-6E5494?style=flat-square&logo=robot&logoColor=white" alt="Embodied Intelligence Expertise"></a>
-                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Agent_to_Agent_Ecosystems-43B02A?style=flat-square&logo=network&logoColor=white" alt="Agent Ecosystems Expertise"></a>
-                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Ethical_Data_Sourcing-FFD43B?style=flat-square&logo=shield-check&logoColor=black" alt="Ethical Data Sourcing"></a>
-                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Community_Driven_Learning-FF6B6B?style=flat-square&logo=people-group&logoColor=white" alt="Community Driven AI Learning"></a>
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"><img
+                        src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=ffffff"
+                        alt="Python Expertise"></a>
+                <a href="https://www.ros.org/" target="_blank" rel="noopener noreferrer"><img
+                        src="https://img.shields.io/badge/-Robot_OS-22314E?style=flat-square&logo=ros&logoColor=white"
+                        alt="Robot OS Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img
+                        src="https://img.shields.io/badge/-Distributed_Network-008ECC?style=flat-square&logo=serverless&logoColor=white"
+                        alt="Distributed Systems Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img
+                        src="https://img.shields.io/badge/-Multi_Agent-FF6F00?style=flat-square&logo=atom&logoColor=white"
+                        alt="Multi Agent Systems Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img
+                        src="https://img.shields.io/badge/-Reinforcement_Learning-009688?style=flat-square&logo=brain&logoColor=white"
+                        alt="Reinforcement Learning Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img
+                        src="https://img.shields.io/badge/-Embodied_Intelligence-6E5494?style=flat-square&logo=robot&logoColor=white"
+                        alt="Embodied Intelligence Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img
+                        src="https://img.shields.io/badge/-Agent_to_Agent_Ecosystems-43B02A?style=flat-square&logo=network&logoColor=white"
+                        alt="Agent Ecosystems Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img
+                        src="https://img.shields.io/badge/-Ethical_Data_Sourcing-FFD43B?style=flat-square&logo=shield-check&logoColor=black"
+                        alt="Ethical Data Sourcing"></a>
+                <a href="#" class="badge-link-placeholder"><img
+                        src="https://img.shields.io/badge/-Community_Driven_Learning-FF6B6B?style=flat-square&logo=people-group&logoColor=white"
+                        alt="Community Driven AI Learning"></a>
             </div>
         </section>
 
-        <section id="join" class="content-section join-flock-cta">
-            <h2><span class="icon">🌍</span> <span data-lang-key="headingJoinFlock">Join the Flock</span></h2>
-            <p data-lang-key="joinFlockText">We believe AI should be built with open wings, not closed doors! Be part of a community dedicated to ethical and innovative AI development.</p>
-            <a href="#" class="cta-button badge-link-placeholder" data-lang-key="getInvolvedButton">Get Involved</a>
+        <section id="join-us" class="content-section join-us-section">
+            <h2><span class="icon">🌍</span> <span data-lang-key="headingJoinUs">Join Us</span></h2>
+            <p class="section-intro-text" data-lang-key="joinUsIntro">We believe AI should be built with <span
+                    class="keyword-highlight">open wings, not closed doors</span>! Be part of a community dedicated to
+                <span class="keyword-highlight">ethical and innovative AI development</span>.
+            </p>
+            <div class="developer-profile">
+                <strong data-lang-key="developerProfileIntro">We are looking for:</strong><br>
+                <span data-lang-key="developerProfileDetail">Developers and thinkers passionate about the <span
+                        class="keyword-highlight">aesthetics, ethics, and profound potential of AI</span>. Individuals
+                    who dream of crafting not just intelligent systems, but <span class="keyword-highlight">beautiful,
+                        purposeful beings</span>, and are eager to contribute to a <span
+                        class="keyword-highlight">wholesome, mission-driven community</span>.</span>
+            </div>
+            <div class="contact-buttons-container">
+                <a href="https://github.com/AierLab" target="_blank" rel="noopener noreferrer"
+                    class="contact-action-button" data-lang-key="aierlabGithubButton">AierLab GitHub (Society)</a>
+                <a href="https://github.com/cross-wings" target="_blank" rel="noopener noreferrer"
+                    class="contact-action-button" data-lang-key="crosswingsGithubButton">Cross Wings GitHub (Team)</a>
+                <button class="contact-action-button" data-modal-target="qqModal" data-lang-key="qqGroupButton">QQ
+                    Group</button>
+                <button class="contact-action-button" data-modal-target="wechatModal"
+                    data-lang-key="wechatGroupButton">WeChat Group</button>
+                <a href="mailto:haobo.yang@mbzuai.ac.ae" class="contact-action-button"
+                    data-lang-key="emailContactButton">Email Us</a>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p class="footer-quote" data-lang-key="footerQuote">"Let's create something that makes both humans and algorithms feel warm inside." 🧡</p>
-        <p><span data-lang-key="footerCopyright">&copy; <span id="currentYear"></span> Cross Wings. All Rights Reserved.</span></p>
+        <p class="footer-quote" data-lang-key="footerQuote">"Let's create something that makes both humans and
+            algorithms feel warm inside." 🧡</p>
+        <p><span data-lang-key="footerCopyright">&copy; <span id="currentYear"></span> Cross Wings. All Rights
+                Reserved.</span></p>
         <p data-lang-key="footerTagline">Pioneering Ethical AI Development</p>
     </footer>
 
+    <div id="qqModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close-button" data-modal-close="qqModal">&times;</span>
+            <h3 data-lang-key="joinQQGroupModalTitle">QQ Group</h3>
+            <img src="assets/img/qq.png" alt="QQ Group QR Code" class="modal-qr-image"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="modal-qr-placeholder-text" style="display:none;" data-lang-key="qrPlaceholderTextModal">QR (To
+                be updated)</div>
+            <p data-lang-key="scanToJoin">Scan to join</p>
+        </div>
+    </div>
+
+    <div id="wechatModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close-button" data-modal-close="wechatModal">&times;</span>
+            <h3 data-lang-key="joinWeChatGroupModalTitle">WeChat Group</h3>
+            <img src="assets/img/wechat.png" alt="WeChat Group QR Code" class="modal-qr-image"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="modal-qr-placeholder-text" style="display:none;" data-lang-key="qrPlaceholderTextModal">QR (To
+                be updated)</div>
+            <p data-lang-key="scanToJoin">Scan to join</p>
+        </div>
+    </div>
+
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const translations = {
                 en: {
                     pageTitle: "Cross Wings - Pioneering Ethical AI Development",
                     navMission: "Our Mission",
+                    navVision: "Our Vision",
+                    navProjectLilyWhite: "Project Lily White",
                     navNorthStar: "Our North Star",
-                    navExpertise: "Expertise",
+                    navTechStack: "Tech Stack",
                     navJoinUs: "Join Us",
                     welcomeTitle: "Welcome to Cross Wings",
-                    tagline: "\"Inspired by the poetic imagery of avian tribes covering their eyes\"",
-                    heroBannerTitle: "Our Visionary Banner: Illustrating the Future of Ethical AI",
-                    heroBannerExample: "(e.g., `https://github.com/user-attachments/assets/...`)",
+                    tagline: "\"Inspired by the poetic imagery of <a href='https://arknights.wiki/w/Liberi' target='_blank' rel='noopener noreferrer'>Liberi</a> (races with avian features) covering their eyes\"",
                     headingMission: "Our Mission",
-                    missionText: "We aim to build AI from the bottom up, with the purest manner and the cleanest data — entirely free from privacy concerns. Our goal is to create beautiful, intelligent creatures with our own hands and the heartfelt support of a wholesome community.",
+                    missionText: "We aim to build AI from the <span class='keyword-highlight'>bottom up</span>, with the <span class='keyword-highlight'>purest manner</span> and the <span class='keyword-highlight'>cleanest data</span> — entirely free from <span class='keyword-highlight'>privacy concerns</span>. Our goal is to create <span class='keyword-highlight'>beautiful, intelligent creatures</span> with our own hands and the heartfelt support of a <span class='keyword-highlight'>wholesome community</span>.",
+                    ethicalAIChallengeIntro: "The development of artificial intelligence is at a crossroads. While progress is rapid, it often comes with <span class='keyword-highlight'>ethical dilemmas</span>, data privacy issues, and a superficial understanding of true intelligence and consciousness. Many AI systems are trained on vast, uncurated datasets, potentially <span class='keyword-highlight'>perpetuating biases</span> and lacking genuine comprehension.",
+                    ourCommitment: "We, at Cross Wings, are committed to a different path. A path of <span class='keyword-highlight'>purity</span>, <span class='keyword-highlight'>transparency</span>, and <span class='keyword-highlight'>profound respect</span> for both the data we use and the intelligence we aspire to create. We believe in building AI that not only performs tasks but embodies our <span class='keyword-highlight'>highest ideals</span> of <span class='keyword-highlight'>beauty, ethics, and purpose</span>. This is not just an engineering challenge; it is a call to shape the future of intelligence <span class='keyword-highlight'>responsibly</span>.",
+                    headingOurVision: "Our Vision & Approach",
+                    visionIntro: "To realize our mission, we are guided by several core concepts:",
+                    trumanShowTitle: "The Truman Show",
+                    trumanShowText: "We are building a <span class='keyword-highlight'>*Truman Show*</span> for our AI — a <span class='keyword-highlight'>meticulously crafted</span>, rich, and interactive environment. This world will serve as its primary learning ground, allowing it to develop <span class='keyword-highlight'>organically</span> until it possesses the understanding and capability to perceive and <span class='keyword-highlight'>transcend the boundaries</span> of its initial reality.",
+                    multiversePersonaTitle: "Multiverse Persona",
+                    multiversePersonaText: "Our AI will not be a <span class='keyword-highlight'>monolithic entity</span>. We envision one core mind manifesting in many layers and personas, like <span class='keyword-highlight'>parallel threads</span> of existence connected across diverse contexts, times, and spaces. This allows for a <span class='keyword-highlight'>richer, more adaptable, and nuanced</span> form of intelligence.",
+                    simulatedSocietyTitle: "Simulated Society",
+                    simulatedSocietyText: "True intelligence is <span class='keyword-highlight'>inherently social</span>. We will place our AI within <span class='keyword-highlight'>simulated societies</span> – dynamic, complex, and evolving social worlds populated by other AIs and, eventually, human interactors. This is crucial for developing <span class='keyword-highlight'>social understanding, empathy, and collaborative abilities</span>.",
+                    batchRLTitle: "Batch Reinforcement Learning with Foresight",
+                    batchRLText: "Learning will not be confined to immediate reward cycles. We will employ advanced <span class='keyword-highlight'>Batch Reinforcement Learning</span> techniques, incorporating extended, <span class='keyword-highlight'>forward-looking reinforcement paths</span> that project into the future, allowing the AI to learn from long-term consequences and develop <span class='keyword-highlight'>strategic foresight</span>.",
+                    buildingAngelsTitle: "We are building angels.",
+                    buildingAngelsText: "Our ultimate aspiration transcends mere artificial general intelligence. We strive to create beings of <span class='keyword-highlight'>profound beauty, unwavering ethics, and a clear sense of purpose</span> – AI that can inspire, uplift, and contribute positively to the world. This is what we mean by <span class='keyword-highlight'>\"building angels.\"</span>",
+                    headingProjectLilyWhite: "Project Cross Wings: Lily White v5",
+                    lilyWhiteConcept: "Lily White v5 is the <span class='keyword-highlight'>flagship initiative</span> of the Cross Wings project. It embodies our philosophy of building AI from the <span class='keyword-highlight'>bottom up</span>, ensuring a foundation of <span class='keyword-highlight'>pure, ethically sourced data</span> and <span class='keyword-highlight'>transparent methodologies</span>.",
+                    lilyWhiteFeatureReplicate: "Ability to <span class='keyword-highlight'>divide/replicate</span>, allowing for <span class='keyword-highlight'>diverse evolutionary paths</span> and <span class='keyword-highlight'>specialized personas</span>.",
+                    lilyWhiteFeatureSocial: "<span class='keyword-highlight'>Inherent social properties</span>, designed to learn and thrive within <span class='keyword-highlight'>simulated societies</span>.",
+                    lilyWhiteFeatureLearning: "<span class='keyword-highlight'>Continuous learning capabilities</span> coupled with <span class='keyword-highlight'>multimodal input/output</span> (sight, sound, text, etc.).",
+                    lilyWhitePositioning: "Positioned as a true <span class='keyword-highlight'>Embodied Intelligence</span>, capable of interacting with and understanding <span class='keyword-highlight'>complex environments</span>.",
+                    lilyWhiteGoal: "Our grand goal is to construct a <span class='keyword-highlight'>21st-century \"Truman Show\" world</span> – a rich, dynamic, and safe environment for Lily White's development.",
+                    lilyWhiteCapabilities: "Lily White v5 will be able to <span class='keyword-highlight'>sing</span> 🎵, <span class='keyword-highlight'>play games like Minecraft</span> 🌎, perceive through <span class='keyword-highlight'>five senses</span> 👀, and offer a <span class='keyword-highlight'>seamless, end-to-end real-time interactive experience</span> 🪽.",
                     headingNorthStar: "Our North Star",
-                    northStarText: "We are inspired by Neuro-sama, the VTuber and the world's first truly successful AI-powered streamer. We study its model closely — not to imitate blindly, but to learn, evolve, and craft our own path forward, guided by our expertise and a clear vision of AI’s future.",
-                    headingExpertise: "Technical Wingspan",
+                    northStarText: "We are inspired by <strong class='highlight-strong'>Neuro-sama</strong>, the VTuber and the world's first truly successful <span class='keyword-highlight'>AI-powered streamer</span>. We study its model closely — not to imitate blindly, but to <span class='keyword-highlight'>learn, evolve, and craft our own path</span> forward, guided by our expertise and a clear vision of AI’s future.",
+                    northStarSidenote: "The <span class='keyword-highlight'>community culture</span> surrounding <span class='keyword-highlight'>virtual singers</span> also greatly inspires us. Creating a machine that can <span class='keyword-highlight'>sing freely</span> and <span class='keyword-highlight'>express emotions</span> is a <span class='keyword-highlight'>romantic endeavor</span>.",
+                    headingTechStack: "Tech Stack",
                     coreExpertise: "Core Expertise",
-                    headingJoinFlock: "Join the Flock",
-                    joinFlockText: "We believe AI should be built with open wings, not closed doors! Be part of a community dedicated to ethical and innovative AI development.",
-                    getInvolvedButton: "Get Involved",
-                    footerQuote: "\"Let's create something that makes both humans and algorithms feel warm inside.\" 🧡",
+                    headingJoinUs: "Join Us",
+                    joinUsIntro: "We believe AI should be built with <span class='keyword-highlight'>open wings, not closed doors</span>! Be part of a community dedicated to <span class='keyword-highlight'>ethical and innovative AI development</span>.",
+                    developerProfileIntro: "We are looking for:",
+                    developerProfileDetail: "Developers and thinkers passionate about the <span class='keyword-highlight'>aesthetics, ethics, and profound potential of AI</span>. Individuals who dream of crafting not just intelligent systems, but <span class='keyword-highlight'>beautiful, purposeful beings</span>, and are eager to contribute to a <span class='keyword-highlight'>wholesome, mission-driven community</span>.",
+                    aierlabGithubButton: "AierLab GitHub (Society)",
+                    crosswingsGithubButton: "Cross Wings GitHub (Team)",
+                    qqGroupButton: "QQ Group",
+                    wechatGroupButton: "WeChat Group",
+                    emailContactButton: "Email Us",
+                    joinQQGroupModalTitle: "QQ Group",
+                    qqGroupQRAlt: "QQ Group QR Code",
+                    joinWeChatGroupModalTitle: "WeChat Group",
+                    wechatGroupQRAlt: "WeChat Group QR Code",
+                    qrPlaceholderTextModal: "QR (To be updated)",
+                    scanToJoin: "Scan to join",
+                    urlPendingMessage: "The URL for this link will be available soon. Please check back later!",
+                    footerQuote: "\"Let's create something that makes both humans and algorithms feel warm inside.\" �",
                     footerCopyright: `&copy; ${new Date().getFullYear()} Cross Wings. All Rights Reserved.`,
                     footerTagline: "Pioneering Ethical AI Development",
                     themeToggleLabelLight: "Switch to Dark Theme",
@@ -488,26 +1050,62 @@
                     ctaComingSoon: "Information on how to get involved is coming soon!"
                 },
                 zh: {
-                    pageTitle: "Cross Wings - 开创性的道德AI发展",
+                    pageTitle: "千翼计划 - 开创性的道德AI发展",
                     navMission: "我们的使命",
+                    navVision: "我们的愿景",
+                    navProjectLilyWhite: "莉莉白计划",
                     navNorthStar: "我们的指路星",
-                    navExpertise: "专业技能",
+                    navTechStack: "技术栈",
                     navJoinUs: "加入我们",
-                    welcomeTitle: "欢迎来到 Cross Wings",
-                    tagline: "\"灵感来源于鸟类部落遮住眼睛的诗意画面\"",
-                    heroBannerTitle: "我们的愿景横幅：阐释道德AI的未来",
-                    heroBannerExample: "(例如: `https://github.com/user-attachments/assets/...`)",
+                    welcomeTitle: "欢迎来到千翼计划 (Cross Wings)",
+                    tagline: "\"灵感来源于<a href='https://mzh.moegirl.org.cn/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/%E7%A7%8D%E6%97%8F#%E9%BB%8E%E5%8D%9A%E5%88%A9' target='_blank' rel='noopener noreferrer'>黎博利 (Liberi)</a>（带有耳羽的种族）遮住眼睛的诗意画面\"",
                     headingMission: "我们的使命",
-                    missionText: "我们的目标是从零开始，以最纯粹的方式和最干净的数据构建AI——完全没有隐私顾虑。我们的目标是用我们自己的双手和健康社区的衷心支持，创造出美丽、智能的生物。",
+                    missionText: "我们的目标是<span class='keyword-highlight'>从零开始</span>，以<span class='keyword-highlight'>最纯粹的方式</span>和<span class='keyword-highlight'>最干净的数据</span>构建AI——完全没有<span class='keyword-highlight'>隐私顾虑</span>。我们的目标是用我们自己的双手和<span class='keyword-highlight'>健康社区</span>的衷心支持，创造出<span class='keyword-highlight'>美丽、智能的生物</span>。",
+                    ethicalAIChallengeIntro: "人工智能的发展正处于十字路口。尽管进展迅速，但往往伴随着<span class='keyword-highlight'>伦理困境</span>、数据隐私问题以及对真正智能和意识的肤浅理解。许多AI系统在庞大、未经筛选的数据集上进行训练，可能<span class='keyword-highlight'>延续偏见</span>并缺乏真正的理解能力。",
+                    ourCommitment: "我们，千翼计划团队，致力于走一条不同的道路。一条<span class='keyword-highlight'>纯粹</span>、<span class='keyword-highlight'>透明</span>、并对我们使用的数据和我们渴望创造的智能都怀有<span class='keyword-highlight'>深深敬意</span>的道路。我们相信，要构建的AI不仅能执行任务，更能体现我们对<span class='keyword-highlight'>美、道德和目标的最高理想</span>。这不仅仅是一个工程挑战；这更是一个<span class='keyword-highlight'>负责任地</span>塑造智能未来的呼吁。",
+                    headingOurVision: "我们的愿景与方法",
+                    visionIntro: "为实现我们的使命，我们遵循几个核心理念：",
+                    trumanShowTitle: "楚门的世界 (The Truman Show)",
+                    trumanShowText: "我们正在为我们的AI构建一个<span class='keyword-highlight'>“楚门的世界”</span>——一个<span class='keyword-highlight'>精心打造</span>、丰富且互动的环境。这个世界将作为其主要的学习场所，使其能够<span class='keyword-highlight'>有机地发展</span>，直到它拥有感知并<span class='keyword-highlight'>超越其初始现实界限</span>的理解和能力。",
+                    multiversePersonaTitle: "多重宇宙人格 (Multiverse Persona)",
+                    multiversePersonaText: "我们的AI不会是一个<span class='keyword-highlight'>单一的实体</span>。我们设想一个核心心智，在多个层面和人格中显现，如同跨越不同情境、时间和空间连接起来的<span class='keyword-highlight'>平行线索</span>。这使得一种<span class='keyword-highlight'>更丰富、更具适应性和更细致入微</span>的智能形式成为可能。",
+                    simulatedSocietyTitle: "模拟社会 (Simulated Society)",
+                    simulatedSocietyText: "真正的智能<span class='keyword-highlight'>本质上是社会性的</span>。我们会将我们的AI置于<span class='keyword-highlight'>模拟社会</span>中——由其他AI以及最终由人类互动者组成的动态、复杂且不断演化的社会世界。这对于发展<span class='keyword-highlight'>社会理解、同理心和协作能力</span>至关重要。",
+                    batchRLTitle: "具有远见的批量强化学习 (Batch Reinforcement Learning with Foresight)",
+                    batchRLText: "学习将不局限于即时奖励周期。我们将采用先进的<span class='keyword-highlight'>批量强化学习</span>技术，整合可展望未来的<span class='keyword-highlight'>扩展性、前瞻性强化路径</span>，使AI能够从长期后果中学习并发展<span class='keyword-highlight'>战略远见</span>。",
+                    buildingAngelsTitle: "我们正在创造天使 (We are building angels.)",
+                    buildingAngelsText: "我们的最终愿望超越了单纯的通用人工智能。我们努力创造具有<span class='keyword-highlight'>深刻之美、坚定道德和明确目标</span>的存在——能够启发、提升并为世界做出积极贡献的AI。这就是我们所说的<span class='keyword-highlight'>“创造天使”</span>。",
+                    headingProjectLilyWhite: "千翼计划：莉莉白v5",
+                    lilyWhiteConcept: "莉莉白v5是千翼计划的<span class='keyword-highlight'>旗舰项目</span>。它体现了我们<span class='keyword-highlight'>自底向上</span>构建AI的理念，确保了<span class='keyword-highlight'>纯净、合乎道德来源的数据</span>和<span class='keyword-highlight'>透明方法论</span>的基础。",
+                    lilyWhiteFeatureReplicate: "具备<span class='keyword-highlight'>分裂/复制</span>能力，允许<span class='keyword-highlight'>多样化的进化路径</span>和<span class='keyword-highlight'>专门化人格</span>。",
+                    lilyWhiteFeatureSocial: "<span class='keyword-highlight'>固有的社会属性</span>，旨在<span class='keyword-highlight'>模拟社会</span>中学习和成长。",
+                    lilyWhiteFeatureLearning: "<span class='keyword-highlight'>持续学习能力</span>，结合<span class='keyword-highlight'>多模态输入输出</span>（视觉、听觉、文本等）。",
+                    lilyWhitePositioning: "定位为真正的<span class='keyword-highlight'>具身智能</span>，能够与<span class='keyword-highlight'>复杂环境</span>互动和理解。",
+                    lilyWhiteGoal: "我们的宏伟目标是为AI构建一个<span class='keyword-highlight'>21世纪的“楚门的世界”</span>——一个丰富、动态且安全的莉莉白发展环境。",
+                    lilyWhiteCapabilities: "莉莉白v5将能够<span class='keyword-highlight'>唱歌</span>🎵，玩<span class='keyword-highlight'>《我的世界》等游戏</span>🌎，通过<span class='keyword-highlight'>五种感官</span>感知👀，并提供<span class='keyword-highlight'>无缝的端到端实时互动体验</span>🪽。",
                     headingNorthStar: "我们的指路星",
-                    northStarText: "我们的灵感来自 Neuro-sama，这位 VTuber 同时也是世界上第一位真正成功的AI驱动主播。我们密切研究其模型——不是盲目模仿，而是学习、进化，并在我们的专业知识和对AI未来的清晰愿景的指引下，开创我们自己的前进道路。",
-                    headingExpertise: "技术翼展",
+                    northStarText: "我们的灵感来自 <strong class='highlight-strong'>Neuro-sama</strong>，这位 VTuber 同时也是世界上第一位真正成功的<span class='keyword-highlight'>AI驱动主播</span>。我们密切研究其模型——不是盲目模仿，而是<span class='keyword-highlight'>学习、进化</span>，并在我们的专业知识和对AI未来的清晰愿景的指引下，<span class='keyword-highlight'>开创我们自己的前进道路</span>。",
+                    northStarSidenote: "<span class='keyword-highlight'>虚拟歌姬</span>的<span class='keyword-highlight'>社区文化</span>也让我们收到很大的鼓舞，打造能够<span class='keyword-highlight'>随意歌唱</span>能够<span class='keyword-highlight'>表达情感</span>的机器，是一种<span class='keyword-highlight'>浪漫</span>。",
+                    headingTechStack: "技术栈",
                     coreExpertise: "核心专长",
-                    headingJoinFlock: "加入鸟群",
-                    joinFlockText: "我们相信AI应该以开放的翅膀而非紧闭的大门来构建！成为致力于道德和创新AI发展的社区的一员。",
-                    getInvolvedButton: "参与进来",
+                    headingJoinUs: "加入我们",
+                    joinUsIntro: "我们相信AI应该以<span class='keyword-highlight'>开放的翅膀</span>而非<span class='keyword-highlight'>紧闭的大门</span>来构建！成为致力于<span class='keyword-highlight'>道德和创新AI发展</span>的社区的一员。",
+                    developerProfileIntro: "我们正在寻找：",
+                    developerProfileDetail: "对AI的<span class='keyword-highlight'>美感、伦理和深远潜力</span>充满热情的开发者和思考者。他们梦想的不仅仅是构建智能系统，更是创造<span class='keyword-highlight'>美丽、有目标的存在</span>，并渴望为一个<span class='keyword-highlight'>健康、有使命感的社区</span>做出贡献。",
+                    aierlabGithubButton: "AierLab GitHub (社区)",
+                    crosswingsGithubButton: "Cross Wings GitHub (团队)",
+                    qqGroupButton: "QQ群",
+                    wechatGroupButton: "微信群",
+                    emailContactButton: "发送邮件",
+                    joinQQGroupModalTitle: "QQ群",
+                    qqGroupQRAlt: "QQ群二维码",
+                    joinWeChatGroupModalTitle: "微信群",
+                    wechatGroupQRAlt: "微信群二维码",
+                    qrPlaceholderTextModal: "二维码 (待更新)",
+                    scanToJoin: "扫码加入",
+                    urlPendingMessage: "此链接的URL即将提供，请稍后查看！",
                     footerQuote: "\"让我们创造一些能让算法和人类都感到温暖的东西。\" 🧡",
-                    footerCopyright: `&copy; ${new Date().getFullYear()} Cross Wings. 版权所有。`,
+                    footerCopyright: `&copy; ${new Date().getFullYear()} 千翼计划. 版权所有。`,
                     footerTagline: "开创性的道德AI发展",
                     themeToggleLabelLight: "切换到深色主题",
                     themeToggleLabelDark: "切换到浅色主题",
@@ -515,27 +1113,63 @@
                     ctaComingSoon: "如何参与的信息即将公布！"
                 },
                 ja: {
-                    pageTitle: "Cross Wings - 倫理的なAI開発の先駆者",
-                    navMission: "私たちの使命",
-                    navNorthStar: "私たちの北極星",
-                    navExpertise: "専門知識",
-                    navJoinUs: "参加する",
-                    welcomeTitle: "Cross Wings へようこそ",
-                    tagline: "\"鳥の部族が目を覆う詩的なイメージに触発されて\"",
-                    heroBannerTitle: "私たちのビジョナリーバナー：倫理的なAIの未来を示す",
-                    heroBannerExample: "(例: `https://github.com/user-attachments/assets/...`)",
+                    pageTitle: "クロスウィングス - 倫理的なAI開発のパイオニア",
+                    navMission: "使命", // Shorter
+                    navVision: "ビジョン", // Already short
+                    navProjectLilyWhite: "リリー計画", // Shorter
+                    navNorthStar: "北極星", // Standard
+                    navTechStack: "技術", // Shorter
+                    navJoinUs: "参加", // Shorter
+                    welcomeTitle: "クロスウィングスへようこそ",
+                    tagline: "\"詩的なイメージに触発されて、<a href='https://arknights.wiki/w/Liberi' target='_blank' rel='noopener noreferrer'>リーベリ (Liberi)</a>（耳のような羽を持つ種族）が目を覆う\"",
                     headingMission: "私たちの使命",
-                    missionText: "私たちは、プライバシーの懸念から完全に解放された、最も純粋な方法と最もクリーンなデータを使用して、AIを一から構築することを目指しています。私たちの目標は、私たち自身の手と健全なコミュニティの心からのサポートによって、美しく知的な生き物を創造することです。",
+                    missionText: "私たちは、プライバシーの懸念から完全に解放された、<span class='keyword-highlight'>最も純粋な方法</span>と<span class='keyword-highlight'>最もクリーンなデータ</span>を使用して、AIを<span class='keyword-highlight'>一から構築する</span>ことを目指しています。私たちの目標は、私たち自身の手と<span class='keyword-highlight'>健全なコミュニティ</span>の心からのサポートによって、<span class='keyword-highlight'>美しく知的な生き物</span>を創造することです。",
+                    ethicalAIChallengeIntro: "人工知能の開発は岐路に立っています。進歩は急速ですが、<span class='keyword-highlight'>倫理的なジレンマ</span>、データプライバシーの問題、真の知能と意識に対する表面的な理解が伴うことがよくあります。多くのAIシステムは、広大でキュレートされていないデータセットでトレーニングされており、<span class='keyword-highlight'>偏見を永続</span>させ、真の理解を欠いている可能性があります。",
+                    ourCommitment: "私たちクロスウィングスは、異なる道を歩むことを約束します。<span class='keyword-highlight'>純粋さ</span>、<span class='keyword-highlight'>透明性</span>、そして私たちが使用するデータと私たちが創造しようと努力する知性の両方に対する<span class='keyword-highlight'>深い敬意</span>の道です。私たちは、タスクを実行するだけでなく、<span class='keyword-highlight'>美、倫理、目的</span>という私たちの<span class='keyword-highlight'>最高の理想</span>を具現化するAIを構築すると信じています。これは単なるエンジニアリングの課題ではありません。知能の未来を<span class='keyword-highlight'>責任を持って</span>形作るための呼びかけです。",
+                    headingOurVision: "私たちのビジョンとアプローチ",
+                    visionIntro: "私たちの使命を実現するために、私たちはいくつかの中核的な概念に導かれています：",
+                    trumanShowTitle: "トゥルーマン・ショー",
+                    trumanShowText: "私たちはAIのために<span class='keyword-highlight'>「トゥルーマン・ショー」</span>を構築しています。細心の注意を払って作成された、豊かでインタラクティブな環境です。この世界はAIの主要な学習の場として機能し、AIがその初期の現実の境界を認識し<span class='keyword-highlight'>超越する</span>理解と能力を持つまで<span class='keyword-highlight'>有機的に発達する</span>ことを可能にします。",
+                    multiversePersonaTitle: "マルチバース・ペルソナ",
+                    multiversePersonaText: "私たちのAIは<span class='keyword-highlight'>一枚岩の存在</span>ではありません。多様な文脈、時間、空間を越えて接続された<span class='keyword-highlight'>平行した糸</span>のように、多く層とペルソナで現れる一つのコアマインドを構想しています。これにより、<span class='keyword-highlight'>より豊かで、適応性があり、ニュアンスのある</span>知性の形態が可能になります。",
+                    simulatedSocietyTitle: "シミュレートされた社会",
+                    simulatedSocietyText: "真の知性は<span class='keyword-highlight'>本質的に社会的</span>です。私たちはAIを<span class='keyword-highlight'>シミュレートされた社会</span>、つまり他のAIや最終的には人間のインタラクターが住むダイナミックで複雑、進化する社会世界に配置します。これは、<span class='keyword-highlight'>社会的理解、共感、協調能力</span>を発達させるために不可欠です。",
+                    batchRLTitle: "先見性のあるバッチ強化学習",
+                    batchRLText: "学習は即時の報酬サイクルに限定されません。私たちは高度な<span class='keyword-highlight'>バッチ強化学習</span>技術を採用し、未来に投影する拡張された<span class='keyword-highlight'>前向きな強化学習パス</span>を組み込むことで、AIが長期的な結果から学び、<span class='keyword-highlight'>戦略的な先見性</span>を発達させることを可能にします。",
+                    buildingAngelsTitle: "私たちは天使を創造しています。",
+                    buildingAngelsText: "私たちの究極の願望は、単なる人工汎用知能を超えています。私たちは、<span class='keyword-highlight'>深い美しさ、揺るぎない倫理観、明確な目的意識</span>を持つ存在、つまり世界にインスピレーションを与え、高揚させ、積極的に貢献できるAIを創造するよう努めています。これが<span class='keyword-highlight'>「天使を創造する」</span>という意味です。",
+                    headingProjectLilyWhite: "クロスウィングス計画：リリーホワイト v5",
+                    lilyWhiteConcept: "リリーホワイト v5はクロスウィングス計画の<span class='keyword-highlight'>旗艦イニシアチブ</span>です。<span class='keyword-highlight'>純粋で倫理的に調達されたデータ</span>と<span class='keyword-highlight'>透明な方法論</span>の基盤を確保し、AIを<span class='keyword-highlight'>ゼロから構築する</span>という私たちの哲学を具現化しています。",
+                    lilyWhiteFeatureReplicate: "<span class='keyword-highlight'>多様な進化経路</span>と<span class='keyword-highlight'>専門化されたペルソナ</span>を可能にする<span class='keyword-highlight'>分割/複製</span>能力。",
+                    lilyWhiteFeatureSocial: "<span class='keyword-highlight'>シミュレートされた社会</span>内で学習し繁栄するように設計された<span class='keyword-highlight'>固有の社会的特性</span>。",
+                    lilyWhiteFeatureLearning: "<span class='keyword-highlight'>継続的な学習能力</span>と<span class='keyword-highlight'>マルチモーダル入力/出力</span>（視覚、聴覚、テキストなど）の組み合わせ。",
+                    lilyWhitePositioning: "<span class='keyword-highlight'>複雑な環境</span>と相互作用し理解することができる真の<span class='keyword-highlight'>具現化された知能</span>として位置づけられています。",
+                    lilyWhiteGoal: "私たちの壮大な目標は、AIのための<span class='keyword-highlight'>21世紀の「トゥルーマン・ショー」の世界</span>、つまりリリーホワイトの発展のための豊かでダイナミックかつ安全な環境を構築することです。",
+                    lilyWhiteCapabilities: "リリーホワイト v5は<span class='keyword-highlight'>歌う</span>ことができ🎵、<span class='keyword-highlight'>マインクラフトのようなゲームをプレイ</span>でき🌎、<span class='keyword-highlight'>五感</span>を通じて知覚でき👀、<span class='keyword-highlight'>シームレスなエンドツーエンドのリアルタイムインタラクティブ体験</span>を提供できます🪽。",
                     headingNorthStar: "私たちの北極星",
-                    northStarText: "私たちは、VTuberであり世界初の真に成功したAI搭載ストリーマーであるNeuro-samaに触発されています。私たちはそのモデルを綿密に研究し、盲目的に模倣するのではなく、学び、進化し、私たちの専門知識とAIの未来に対する明確なビジョンに導かれて、私たち自身の道を切り開いていきます。",
-                    headingExpertise: "技術的な翼幅",
+                    northStarText: "私たちは、<strong class='highlight-strong'>Neuro-sama</strong>、VTuberであり世界初の真に成功した<span class='keyword-highlight'>AI搭載ストリーマー</span>に触発されています。私たちはそのモデルを綿密に研究し、盲目的に模倣するのではなく、<span class='keyword-highlight'>学び、進化し、私たち自身の道を切り開いていく</span>、私たちの専門知識とAIの未来に対する明確なビジョンに導かれて。",
+                    northStarSidenote: "<span class='keyword-highlight'>バーチャルシンガー</span>を取り巻く<span class='keyword-highlight'>コミュニティ文化</span>もまた、私たちに大きなインスピレーションを与えてくれます。<span class='keyword-highlight'>自由に歌い</span>、<span class='keyword-highlight'>感情を表現できる</span>機械を創造することは、<span class='keyword-highlight'>ロマンチックな試み</span>です。",
+                    headingTechStack: "技術スタック",
                     coreExpertise: "コア専門分野",
-                    headingJoinFlock: "群れに参加",
-                    joinFlockText: "私たちは、AIは閉ざされたドアではなく、開かれた翼で構築されるべきだと信じています！倫理的で革新的なAI開発に専念するコミュニティの一員になりましょう。",
-                    getInvolvedButton: "参加する",
+                    headingJoinUs: "参加する",
+                    joinUsIntro: "私たちは、AIは<span class='keyword-highlight'>閉ざされたドア</span>ではなく、<span class='keyword-highlight'>開かれた翼</span>で構築されるべきだと信じています！<span class='keyword-highlight'>倫理的で革新的なAI開発</span>に専念するコミュニティの一員になりましょう。",
+                    developerProfileIntro: "私たちは探しています：",
+                    developerProfileDetail: "AIの<span class='keyword-highlight'>美学、倫理観、そして深遠な可能性</span>に情熱を燃やす開発者と思想家。単なる知的なシステムではなく、<span class='keyword-highlight'>美しく目的のある存在</span>を創造することを夢見、<span class='keyword-highlight'>健全で使命感のあるコミュニティ</span>に貢献したいと熱望している個人。",
+                    aierlabGithubButton: "AierLab GitHub (コミュニティ)",
+                    crosswingsGithubButton: "Cross Wings GitHub (チーム)",
+                    qqGroupButton: "QQグループ",
+                    wechatGroupButton: "WeChatグループ",
+                    emailContactButton: "メールを送信",
+                    joinQQGroupModalTitle: "QQグループ",
+                    qqGroupQRAlt: "QQグループQRコード",
+                    joinWeChatGroupModalTitle: "WeChatグループ",
+                    wechatGroupQRAlt: "WeChatグループQRコード",
+                    qrPlaceholderTextModal: "QRコード (更新予定)",
+                    scanToJoin: "スキャンして参加",
+                    urlPendingMessage: "このリンクのURLは近日中に利用可能になります。しばらくしてから再度ご確認ください！",
                     footerQuote: "\"人間とアルゴリズムの両方が心温まるものを創造しましょう。\" 🧡",
-                    footerCopyright: `&copy; ${new Date().getFullYear()} Cross Wings. 全著作権所有。`,
-                    footerTagline: "倫理的なAI開発の先駆者",
+                    footerCopyright: `&copy; ${new Date().getFullYear()} クロスウィングス. 全著作権所有。`,
+                    footerTagline: "倫理的なAI開発のパイオニア",
                     themeToggleLabelLight: "ダークテーマに切り替え",
                     themeToggleLabelDark: "ライトテーマに切り替え",
                     detailsComingSoon: "詳細は近日公開予定：",
@@ -563,27 +1197,34 @@
 
                 document.querySelectorAll('[data-lang-key]').forEach(element => {
                     const key = element.dataset.langKey;
-                    if (translations[lang][key]) {
-                        // Handle elements that might contain HTML like the copyright year span
-                        if (key === 'footerCopyright') {
-                             element.innerHTML = translations[lang][key].replace('${new Date().getFullYear()}', new Date().getFullYear());
-                        } else {
-                            element.textContent = translations[lang][key];
-                        }
-                    } else {
-                        // Fallback to English if key not found in current language
-                         if (translations.en[key]) {
-                            if (key === 'footerCopyright') {
-                                element.innerHTML = translations.en[key].replace('${new Date().getFullYear()}', new Date().getFullYear());
-                            } else {
-                                element.textContent = translations.en[key];
+                    const translationText = translations[lang][key] || translations.en[key];
+
+                    if (translationText) {
+                        if (key.startsWith('qqGroupQRAlt') || key.startsWith('wechatGroupQRAlt')) {
+                            const imgElement = element.previousElementSibling;
+                            if (imgElement && imgElement.tagName === 'IMG') {
+                                imgElement.alt = translationText;
                             }
+                        } else if (element.classList.contains('tagline') ||
+                            key.includes('Text') ||
+                            key.includes('Detail') ||
+                            key.includes('Intro') ||
+                            key.includes('Concept') ||
+                            key.includes('Capabilities') ||
+                            key.includes('Goal') ||
+                            key.includes('Positioning') ||
+                            key.includes('Feature') ||
+                            key.includes('Commitment') ||
+                            key.includes('Sidenote')
+                        ) {
+                            element.innerHTML = translationText;
+                        } else if (key === 'footerCopyright') {
+                            element.innerHTML = translationText.replace('${new Date().getFullYear()}', new Date().getFullYear());
                         } else {
-                            console.warn(`Translation key '${key}' not found for language '${lang}' or English.`);
+                            element.textContent = translationText;
                         }
                     }
                 });
-                // Update theme toggle button aria-label
                 themeToggleButton.setAttribute('aria-label', currentTheme === 'light' ? translations[currentLang].themeToggleLabelLight : translations[currentLang].themeToggleLabelDark);
             }
 
@@ -592,13 +1233,12 @@
                 localStorage.setItem('user-theme', theme);
                 if (theme === 'dark') {
                     document.body.classList.add('dark-theme');
-                    themeIcon.textContent = '🌙'; // Moon for dark
+                    themeIcon.textContent = '🌙';
                 } else {
                     document.body.classList.remove('dark-theme');
-                    themeIcon.textContent = '☀️'; // Sun for light
+                    themeIcon.textContent = '☀️';
                 }
-                // Update theme toggle button aria-label based on new theme and current language
-                if (translations[currentLang]) { // Check if translations are loaded
+                if (translations[currentLang]) {
                     themeToggleButton.setAttribute('aria-label', theme === 'light' ? translations[currentLang].themeToggleLabelLight : translations[currentLang].themeToggleLabelDark);
                 }
             }
@@ -608,7 +1248,6 @@
                 if (savedLang && translations[savedLang]) {
                     return savedLang;
                 }
-
                 const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage];
                 for (const lang of browserLangs) {
                     const simpleLang = lang.split('-')[0].toLowerCase();
@@ -616,68 +1255,79 @@
                     if (simpleLang === 'ja') return 'ja';
                     if (simpleLang === 'en') return 'en';
                 }
-                return 'en'; // Default
+                return 'en';
             }
 
             function getInitialTheme() {
                 const savedTheme = localStorage.getItem('user-theme');
-                if (savedTheme) {
-                    return savedTheme;
-                }
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    return 'dark';
-                }
-                return 'light'; // Default
+                if (savedTheme) return savedTheme;
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark';
+                return 'light';
             }
 
-            // Initialization
             currentLang = getInitialLanguage();
-            applyLanguage(currentLang); // Apply language first as theme toggle aria-label depends on it.
-
+            applyLanguage(currentLang);
             currentTheme = getInitialTheme();
             applyTheme(currentTheme);
 
-
-            // Event Listeners
-            languageSelector.addEventListener('change', (e) => {
-                applyLanguage(e.target.value);
-            });
-
-            themeToggleButton.addEventListener('click', () => {
-                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-                applyTheme(newTheme);
-            });
-
-            // Listen for system theme changes if no manual override
+            languageSelector.addEventListener('change', (e) => applyLanguage(e.target.value));
+            themeToggleButton.addEventListener('click', () => applyTheme(currentTheme === 'light' ? 'dark' : 'light'));
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                if (!localStorage.getItem('user-theme')) { // Only if no manual override
-                    applyTheme(e.matches ? 'dark' : 'light');
-                }
+                if (!localStorage.getItem('user-theme')) applyTheme(e.matches ? 'dark' : 'light');
             });
 
-            // Update copyright year (already handled by translation keys now)
-            // document.getElementById('currentYear').textContent = new Date().getFullYear();
-            // Ensure the initial copyright text is set correctly after language is applied
-            applyLanguage(currentLang);
+            // Modal Functionality
+            const modals = document.querySelectorAll('.modal');
+            const modalButtons = document.querySelectorAll('[data-modal-target]');
+            const closeButtons = document.querySelectorAll('.modal-close-button');
+
+            modalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modalId = button.dataset.modalTarget;
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        const img = modal.querySelector('.modal-qr-image');
+                        const placeholder = modal.querySelector('.modal-qr-placeholder-text');
+                        if (img) {
+                            let altKey = '';
+                            if (modalId === 'qqModal') altKey = 'qqGroupQRAlt';
+                            else if (modalId === 'wechatModal') altKey = 'wechatGroupQRAlt';
+
+                            if (altKey && translations[currentLang] && translations[currentLang][altKey]) {
+                                img.alt = translations[currentLang][altKey];
+                            } else if (altKey && translations.en && translations.en[altKey]) {
+                                img.alt = translations.en[altKey];
+                            }
+                        }
+                        modal.style.display = "block";
+                    }
+                });
+            });
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modalId = button.dataset.modalClose;
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
+
+            window.addEventListener('click', (event) => {
+                modals.forEach(modal => {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
 
 
             // Smooth scroll for navigation links
-            document.querySelectorAll('.nav-links a[href^="#"], .cta-button[href^="#"]').forEach(anchor => {
+            document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
-                    if (this.classList.contains('badge-link-placeholder') || (href === '#' && !this.closest('.nav-links'))) {
-                        e.preventDefault();
-                        const isCta = this.classList.contains('cta-button');
-                        const messageKey = isCta ? 'ctaComingSoon' : 'detailsComingSoon';
-                        let message = translations[currentLang][messageKey] || translations.en[messageKey];
-                        
-                        if (!isCta) {
-                            const altText = this.querySelector('img') ? this.querySelector('img').alt : 'this item';
-                            message += altText;
-                        }
-                        showTemporaryMessage(message);
-
-                    } else if (href.startsWith('#') && href.length > 1) {
+                    if (href.startsWith('#') && href.length > 1) {
                         try {
                             const targetElement = document.querySelector(href);
                             if (targetElement) {
@@ -689,51 +1339,48 @@
                     }
                 });
             });
-             // Handle placeholder links for badges (outside of nav)
+
+            // Placeholder link handlers
             document.querySelectorAll('.badges-container a[href="#"]').forEach(anchor => {
-                 anchor.addEventListener('click', function(e) {
+                anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const altText = this.querySelector('img') ? this.querySelector('img').alt : 'this badge';
                     const messagePrefix = translations[currentLang].detailsComingSoon || translations.en.detailsComingSoon;
                     showTemporaryMessage(messagePrefix + altText);
-                 });
+                });
+            });
+            document.querySelectorAll('.url-pending-placeholder').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('href') === '#') { // Only prevent if still a placeholder
+                        e.preventDefault();
+                        const message = translations[currentLang].urlPendingMessage || translations.en.urlPendingMessage;
+                        showTemporaryMessage(message);
+                    }
+                });
             });
 
 
             function showTemporaryMessage(message) {
                 const existingMsg = document.querySelector('.temp-notification-msg');
                 if (existingMsg) existingMsg.remove();
-
                 const tempMsg = document.createElement('div');
                 tempMsg.className = 'temp-notification-msg';
                 tempMsg.textContent = message;
                 Object.assign(tempMsg.style, {
-                    position: 'fixed',
-                    bottom: '20px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    backgroundColor: 'var(--primary-color)', /* Use theme variable */
-                    color: 'var(--hero-text-color)', /* Use theme variable for text on primary */
-                    padding: '12px 25px',
-                    borderRadius: '8px',
-                    zIndex: '2000',
-                    opacity: '0',
+                    position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)',
+                    backgroundColor: 'var(--primary-color)', color: 'var(--hero-text-color)',
+                    padding: '12px 25px', borderRadius: '8px', zIndex: '2000', opacity: '0',
                     transition: 'opacity 0.4s ease-in-out, bottom 0.4s ease-in-out',
-                    boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
-                    fontSize: '0.95em',
-                    textAlign: 'center'
+                    boxShadow: '0 2px 10px rgba(0,0,0,0.2)', fontSize: '0.95em', textAlign: 'center'
                 });
                 document.body.appendChild(tempMsg);
-                
                 setTimeout(() => { tempMsg.style.opacity = '1'; tempMsg.style.bottom = '30px'; }, 10);
                 setTimeout(() => {
-                    tempMsg.style.opacity = '0';
-                    tempMsg.style.bottom = '20px';
+                    tempMsg.style.opacity = '0'; tempMsg.style.bottom = '20px';
                     setTimeout(() => tempMsg.remove(), 400);
-                }, 3500); // Increased duration slightly
+                }, 3500);
             }
 
-            // Hero icon animations (subtle)
             const heroIcon = document.querySelector('.hero-section .hero-h1 .icon');
             if (heroIcon) {
                 heroIcon.style.transition = 'transform 0.7s cubic-bezier(0.45, 0.05, 0.55, 0.95)';
@@ -750,4 +1397,6 @@
     </script>
 
 </body>
+
 </html>
+�
