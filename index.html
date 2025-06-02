@@ -81,9 +81,7 @@
             --modal-close-color-dark: #bbbbbb;
             --modal-close-hover-color-dark: #ffffff;
             --contact-action-button-bg-dark: #3a3f44;
-            /* Darker button background for Join Us section */
             --contact-action-button-text-dark: #e0e0e0;
-            /* Lighter text for Join Us section buttons */
             --contact-action-button-hover-bg-dark: #4f555a;
             --contact-action-button-hover-text-dark: #ffffff;
             --keyword-highlight-color-dark: #79c1ff;
@@ -242,10 +240,16 @@
             margin-right: 8px;
         }
 
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 5px 20px;
+        }
+
         .nav-links a {
             color: var(--nav-text);
             text-decoration: none;
-            margin-left: 20px;
             font-size: 1em;
             transition: color 0.3s ease;
         }
@@ -258,6 +262,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
+            margin-left: auto;
         }
 
         #language-selector {
@@ -543,12 +548,15 @@
 
         .modal-content {
             background-color: var(--modal-content-bg);
-            margin: 15% auto;
+            margin: 10% auto;
             padding: 25px;
             border: 1px solid var(--border-color);
             width: auto;
-            max-width: 300px;
+            display: inline-block;
             min-width: 250px;
+            max-width: 90vw;
+            max-height: 80vh;
+            overflow-y: auto;
             border-radius: 8px;
             text-align: center;
             position: relative;
@@ -581,12 +589,10 @@
             margin: 20px auto 10px;
             border-radius: 4px;
             background-color: #fff;
-            /* Keep white background for QR codes */
         }
 
         .modal-qr-placeholder-text {
             width: 200px;
-            /* Keep fixed size for text placeholder */
             height: 200px;
             background-color: var(--qr-placeholder-bg);
             color: var(--qr-placeholder-text);
@@ -596,7 +602,6 @@
             border-radius: 6px;
             margin: 20px auto 10px;
             display: block;
-            /* Will be toggled by JS */
         }
 
 
@@ -665,11 +670,13 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 5px 15px;
+                gap: 5px 10px;
             }
 
             .nav-links a {
                 margin-left: 0;
+                font-size: 0.9em;
+                padding: 5px 0;
             }
 
             .settings-controls {
@@ -715,7 +722,8 @@
 
             .modal-content {
                 width: 90%;
-                margin: 20% auto;
+                margin: 10% auto;
+                max-height: 70vh;
             }
 
             .contact-buttons-container {
@@ -740,6 +748,10 @@
 
             .content-section h3 {
                 font-size: 1.1em;
+            }
+
+            .nav-links a {
+                font-size: 0.85em;
             }
         }
     </style>
@@ -1041,7 +1053,7 @@
                     qrPlaceholderTextModal: "QR (To be updated)",
                     scanToJoin: "Scan to join",
                     urlPendingMessage: "The URL for this link will be available soon. Please check back later!",
-                    footerQuote: "\"Let's create something that makes both humans and algorithms feel warm inside.\" ",
+                    footerQuote: "\"Let's create something that makes both humans and algorithms feel warm inside.\" 🧡",
                     footerCopyright: `&copy; ${new Date().getFullYear()} Cross Wings. All Rights Reserved.`,
                     footerTagline: "Pioneering Ethical AI Development",
                     themeToggleLabelLight: "Switch to Dark Theme",
@@ -1114,12 +1126,12 @@
                 },
                 ja: {
                     pageTitle: "クロスウィングス - 倫理的なAI開発のパイオニア",
-                    navMission: "使命", // Shorter
-                    navVision: "ビジョン", // Already short
-                    navProjectLilyWhite: "リリー計画", // Shorter
-                    navNorthStar: "北極星", // Standard
-                    navTechStack: "技術", // Shorter
-                    navJoinUs: "参加", // Shorter
+                    navMission: "使命",
+                    navVision: "ビジョン",
+                    navProjectLilyWhite: "リリー計画",
+                    navNorthStar: "北極星",
+                    navTechStack: "技術",
+                    navJoinUs: "参加",
                     welcomeTitle: "クロスウィングスへようこそ",
                     tagline: "\"詩的なイメージに触発されて、<a href='https://arknights.wiki/w/Liberi' target='_blank' rel='noopener noreferrer'>リーベリ (Liberi)</a>（耳のような羽を持つ種族）が目を覆う\"",
                     headingMission: "私たちの使命",
@@ -1287,7 +1299,6 @@
                     const modal = document.getElementById(modalId);
                     if (modal) {
                         const img = modal.querySelector('.modal-qr-image');
-                        const placeholder = modal.querySelector('.modal-qr-placeholder-text');
                         if (img) {
                             let altKey = '';
                             if (modalId === 'qqModal') altKey = 'qqGroupQRAlt';
@@ -1351,7 +1362,7 @@
             });
             document.querySelectorAll('.url-pending-placeholder').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    if (this.getAttribute('href') === '#') { // Only prevent if still a placeholder
+                    if (this.getAttribute('href') === '#') {
                         e.preventDefault();
                         const message = translations[currentLang].urlPendingMessage || translations.en.urlPendingMessage;
                         showTemporaryMessage(message);
