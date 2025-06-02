@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-lang-key="pageTitle">Cross Wings - Pioneering Ethical AI Development</title>
     <style>
-        /* Reset and Base Styles */
+        /* Reset and Base Styles (variables defined as before) */
         :root {
             /* Light Theme (Default) */
             --primary-color-light: #00509e;
@@ -30,10 +30,6 @@
             --nav-bg-light: var(--primary-color-light);
             --nav-text-light: #ffffff;
             --nav-link-hover-light: #e9ecef;
-            --settings-icon-color-light: #ffffff;
-            --settings-select-bg-light: var(--primary-color-light);
-            --settings-select-text-light: #ffffff;
-            --settings-select-border-light: #ffffff;
             --qr-placeholder-bg-light: #e9ecef;
             --qr-placeholder-text-light: #6c757d;
             --modal-bg-light: rgba(0, 0, 0, 0.5);
@@ -46,6 +42,11 @@
             --contact-action-button-hover-text-light: #ffffff;
             --keyword-highlight-color-light: #003d7a;
             --sidenote-text-color-light: #5a6268;
+            --floating-control-bg-light: #ffffff;
+            --floating-control-text-light: var(--primary-color-light);
+            --floating-control-shadow-light: 0 2px 10px rgba(0, 0, 0, 0.2);
+            --floating-control-border-light: var(--border-color-light);
+            --hamburger-color-light: #ffffff;
 
 
             /* Dark Theme Variables */
@@ -70,10 +71,6 @@
             --nav-bg-dark: #1a1a1a;
             --nav-text-dark: #e9ecef;
             --nav-link-hover-dark: #495057;
-            --settings-icon-color-dark: #e9ecef;
-            --settings-select-bg-dark: #1a1a1a;
-            --settings-select-text-dark: #e9ecef;
-            --settings-select-border-dark: #495057;
             --qr-placeholder-bg-dark: #2a2a2a;
             --qr-placeholder-text-dark: #9a9a9a;
             --modal-bg-dark: rgba(0, 0, 0, 0.7);
@@ -86,6 +83,11 @@
             --contact-action-button-hover-text-dark: #ffffff;
             --keyword-highlight-color-dark: #79c1ff;
             --sidenote-text-color-dark: #98a0a6;
+            --floating-control-bg-dark: #2c3e50;
+            --floating-control-text-dark: #ecf0f1;
+            --floating-control-shadow-dark: 0 2px 10px rgba(0, 0, 0, 0.4);
+            --floating-control-border-dark: #4a5568;
+            --hamburger-color-dark: #e9ecef;
 
 
             /* Default to light theme variables */
@@ -110,10 +112,6 @@
             --nav-bg: var(--nav-bg-light);
             --nav-text: var(--nav-text-light);
             --nav-link-hover: var(--nav-link-hover-light);
-            --settings-icon-color: var(--settings-icon-color-light);
-            --settings-select-bg: var(--settings-select-bg-light);
-            --settings-select-text: var(--settings-select-text-light);
-            --settings-select-border: var(--settings-select-border-light);
             --qr-placeholder-bg: var(--qr-placeholder-bg-light);
             --qr-placeholder-text: var(--qr-placeholder-text-light);
             --modal-bg: var(--modal-bg-light);
@@ -126,6 +124,11 @@
             --contact-action-button-hover-text: var(--contact-action-button-hover-text-light);
             --keyword-highlight-color: var(--keyword-highlight-color-light);
             --sidenote-text-color: var(--sidenote-text-color-light);
+            --floating-control-bg: var(--floating-control-bg-light);
+            --floating-control-text: var(--floating-control-text-light);
+            --floating-control-shadow: var(--floating-control-shadow-light);
+            --floating-control-border: var(--floating-control-border-light);
+            --hamburger-color: var(--hamburger-color-light);
 
 
             --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -155,10 +158,6 @@
             --nav-bg: var(--nav-bg-dark);
             --nav-text: var(--nav-text-dark);
             --nav-link-hover: var(--nav-link-hover-dark);
-            --settings-icon-color: var(--settings-icon-color-dark);
-            --settings-select-bg: var(--settings-select-bg-dark);
-            --settings-select-text: var(--settings-select-text-dark);
-            --settings-select-border: var(--settings-select-border-dark);
             --qr-placeholder-bg: var(--qr-placeholder-bg-dark);
             --qr-placeholder-text: var(--qr-placeholder-text-dark);
             --modal-bg: var(--modal-bg-dark);
@@ -171,6 +170,11 @@
             --contact-action-button-hover-text: var(--contact-action-button-hover-text-dark);
             --keyword-highlight-color: var(--keyword-highlight-color-dark);
             --sidenote-text-color: var(--sidenote-text-color-dark);
+            --floating-control-bg: var(--floating-control-bg-dark);
+            --floating-control-text: var(--floating-control-text-dark);
+            --floating-control-shadow: var(--floating-control-shadow-dark);
+            --floating-control-border: var(--floating-control-border-dark);
+            --hamburger-color: var(--hamburger-color-dark);
         }
 
         body {
@@ -212,7 +216,8 @@
         .navbar {
             width: 100%;
             background-color: var(--nav-bg);
-            padding: 15px 0;
+            padding: 15px 1rem;
+            box-sizing: border-box;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
@@ -221,12 +226,13 @@
         }
 
         .nav-container {
-            width: 90%;
+            width: 100%;
             max-width: 1100px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            /* gap: 20px; Removed to allow hamburger menu to be on the far right */
         }
 
         .nav-logo {
@@ -234,17 +240,29 @@
             color: var(--nav-text);
             font-weight: 600;
             text-decoration: none;
+            /* margin-right: 15px; Let flexbox handle spacing or hamburger takes it */
         }
 
         .nav-logo .icon {
             margin-right: 8px;
         }
 
+        .nav-links-container {
+            /* New container for links and hamburger */
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            /* Allow it to take space */
+            justify-content: flex-end;
+            /* Push links/hamburger to the right */
+        }
+
         .nav-links {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 5px 20px;
+            gap: 5px 15px;
+            /* flex-grow: 1; Removed, let parent handle growth */
         }
 
         .nav-links a {
@@ -252,50 +270,25 @@
             text-decoration: none;
             font-size: 1em;
             transition: color 0.3s ease;
+            padding: 5px 0;
         }
 
         .nav-links a:hover {
             color: var(--nav-link-hover);
         }
 
-        .settings-controls {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-left: auto;
-        }
-
-        #language-selector {
-            background-color: var(--settings-select-bg);
-            color: var(--settings-select-text);
-            border: 1px solid var(--settings-select-border);
-            padding: 5px 8px;
-            border-radius: 4px;
-            font-family: var(--font-primary);
-            font-size: 0.9em;
-            cursor: pointer;
-        }
-
-        #language-selector option {
-            background-color: var(--section-bg-color);
-            color: var(--text-color);
-        }
-
-
-        #theme-toggle-button {
+        .hamburger-menu {
+            display: none;
+            /* Hidden by default on larger screens */
             background: none;
             border: none;
-            color: var(--settings-icon-color);
-            font-size: 1.5em;
+            color: var(--hamburger-color);
+            font-size: 1.8em;
+            /* Size of the hamburger icon */
             cursor: pointer;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #theme-toggle-button #theme-icon {
-            transition: transform 0.3s ease;
+            padding: 5px;
+            margin-left: 15px;
+            /* Space from nav links if they are visible */
         }
 
 
@@ -303,9 +296,10 @@
         .hero-section {
             background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
             color: var(--hero-text-color);
-            padding: 70px 20px 50px;
+            padding: 70px 1rem 50px;
             text-align: center;
             width: 100%;
+            box-sizing: border-box;
             transition: background 0.3s ease;
         }
 
@@ -345,10 +339,11 @@
 
         /* Main Content Container */
         .main-container {
-            width: 90%;
+            width: 100%;
             max-width: 1100px;
             margin: 35px auto;
-            padding: 0;
+            padding: 0 1rem;
+            box-sizing: border-box;
         }
 
         /* Section Styling */
@@ -610,9 +605,10 @@
             background-color: var(--footer-bg);
             color: var(--footer-text-color);
             text-align: center;
-            padding: 35px 20px;
+            padding: 35px 1rem;
             margin-top: 40px;
             width: 100%;
+            box-sizing: border-box;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -627,9 +623,88 @@
             font-size: 1.05em;
         }
 
+        /* Floating Controls */
+        .floating-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1010;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .floating-control-button {
+            background-color: var(--floating-control-bg);
+            color: var(--floating-control-text);
+            border: 1px solid var(--floating-control-border);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: var(--floating-control-shadow);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .floating-control-button:hover {
+            transform: scale(1.1);
+        }
+
+        #language-options {
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+            background-color: var(--floating-control-bg);
+            border: 1px solid var(--floating-control-border);
+            border-radius: 8px;
+            box-shadow: var(--floating-control-shadow);
+            padding: 5px;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 100px;
+            /* Ensure options have some width */
+        }
+
+        #language-options button {
+            background-color: transparent;
+            color: var(--floating-control-text);
+            border: none;
+            padding: 8px 12px;
+            text-align: left;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        #language-options button:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-theme #language-options button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
 
         /* Responsive adjustments */
         @media (max-width: 992px) {
+
+            /* Tablet and larger phones */
+            .nav-links {
+                gap: 5px 10px;
+                /* Reduce gap for nav links */
+            }
+
+            .nav-links a {
+                font-size: 0.9em;
+                /* Slightly smaller nav links */
+            }
+
             .hero-section .hero-h1 {
                 font-size: 2.3em;
             }
@@ -645,47 +720,84 @@
             .content-section h3 {
                 font-size: 1.3em;
             }
-
-            .settings-controls {
-                gap: 10px;
-            }
-
-            #language-selector {
-                font-size: 0.85em;
-                padding: 4px 6px;
-            }
-
-            #theme-toggle-button {
-                font-size: 1.3em;
-            }
         }
 
         @media (max-width: 768px) {
+
+            /* Mobile devices */
             .nav-container {
-                flex-direction: column;
-                gap: 10px;
+                flex-wrap: wrap;
+                /* Allow items to wrap if logo is too wide */
+            }
+
+            .nav-logo {
+                margin-bottom: 0;
+                flex-shrink: 0;
+                /* Prevent logo from shrinking too much */
+            }
+
+            .nav-links-container {
+                width: 100%;
+                /* Make link container full width for dropdown */
+                order: 3;
+                /* Place below logo */
+                justify-content: center;
+                /* Center hamburger if it's the only item */
             }
 
             .nav-links {
+                display: none;
+                /* Hide links by default */
+                flex-direction: column;
+                /* Stack links vertically */
+                width: 100%;
+                background-color: var(--nav-bg);
+                /* Background for dropdown */
+                position: absolute;
+                top: 100%;
+                /* Position below navbar */
+                left: 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 10px 0;
+                /* Padding for dropdown */
+                z-index: 999;
+                /* Below navbar's sticky z-index but above content */
+            }
+
+            .nav-links.active {
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 5px 10px;
+                /* Show when active */
             }
 
             .nav-links a {
-                margin-left: 0;
-                font-size: 0.9em;
-                padding: 5px 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                /* More padding for tap targets */
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                /* Separator for dark theme */
             }
 
-            .settings-controls {
-                order: -1;
-                margin-bottom: 10px;
+            body:not(.dark-theme) .nav-links a {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                /* Separator for light theme */
             }
+
+            .nav-links a:first-child {
+                border-top: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+                /* Show hamburger on mobile */
+                margin-left: auto;
+                /* Push to the right */
+            }
+
+            /* Settings controls (now floating) already have mobile adjustments */
 
             .hero-section {
-                padding: 50px 15px 30px;
+                padding: 50px 1rem 30px;
             }
 
             .hero-section .hero-h1 {
@@ -697,11 +809,14 @@
             }
 
             .main-container {
-                width: 95%;
+                width: auto;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                padding: 0;
             }
 
             .content-section {
-                padding: 25px;
+                padding: 20px;
             }
 
             .content-section h2 {
@@ -735,6 +850,26 @@
             .contact-action-button {
                 width: 100%;
             }
+
+            .site-footer {
+                padding: 35px 1rem;
+            }
+
+            .floating-controls {
+                bottom: 15px;
+                right: 15px;
+                gap: 8px;
+            }
+
+            .floating-control-button {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3em;
+            }
+
+            #language-options {
+                bottom: 55px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -751,7 +886,19 @@
             }
 
             .nav-links a {
-                font-size: 0.85em;
+                font-size: 0.9em;
+            }
+
+            /* Adjust for very small screens */
+            .main-container {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .hero-section,
+            .site-footer {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
             }
         }
     </style>
@@ -762,23 +909,17 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo"><span class="icon">🕊️</span> Cross Wings</a>
-            <div class="nav-links">
-                <a href="#mission" data-lang-key="navMission">Our Mission</a>
-                <a href="#vision" data-lang-key="navVision">Our Vision</a>
-                <a href="#project-lily-white" data-lang-key="navProjectLilyWhite">Project Lily White</a>
-                <a href="#north-star" data-lang-key="navNorthStar">Our North Star</a>
-                <a href="#tech-stack" data-lang-key="navTechStack">Tech Stack</a>
-                <a href="#join-us" data-lang-key="navJoinUs">Join Us</a>
-            </div>
-            <div class="settings-controls">
-                <select id="language-selector">
-                    <option value="en">English</option>
-                    <option value="zh">中文 (简体)</option>
-                    <option value="ja">日本語</option>
-                </select>
-                <button id="theme-toggle-button" aria-label="Toggle theme">
-                    <span id="theme-icon">☀️</span>
-                </button>
+            <div class="nav-links-container"> <button class="hamburger-menu" id="hamburger-menu"
+                    aria-label="Toggle navigation" aria-expanded="false">
+                    &#9776; </button>
+                <div class="nav-links" id="nav-links">
+                    <a href="#mission" data-lang-key="navMission">Our Mission</a>
+                    <a href="#vision" data-lang-key="navVision">Our Vision</a>
+                    <a href="#project-lily-white" data-lang-key="navProjectLilyWhite">Project Lily White</a>
+                    <a href="#north-star" data-lang-key="navNorthStar">Our North Star</a>
+                    <a href="#tech-stack" data-lang-key="navTechStack">Tech Stack</a>
+                    <a href="#join-us" data-lang-key="navJoinUs">Join Us</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -970,6 +1111,20 @@
         <p data-lang-key="footerTagline">Pioneering Ethical AI Development</p>
     </footer>
 
+    <div id="floating-controls" class="floating-controls">
+        <button id="theme-toggle-button" class="floating-control-button" aria-label="Toggle theme">
+            <span id="theme-icon">☀️</span>
+        </button>
+        <div id="language-selector-container">
+            <button id="language-toggle-button" class="floating-control-button" aria-label="Select language">🌐</button>
+            <div id="language-options">
+                <button data-lang="en">English</button>
+                <button data-lang="zh">中文</button>
+                <button data-lang="ja">日本語</button>
+            </div>
+        </div>
+    </div>
+
     <div id="qqModal" class="modal">
         <div class="modal-content">
             <span class="modal-close-button" data-modal-close="qqModal">&times;</span>
@@ -1058,6 +1213,7 @@
                     footerTagline: "Pioneering Ethical AI Development",
                     themeToggleLabelLight: "Switch to Dark Theme",
                     themeToggleLabelDark: "Switch to Light Theme",
+                    languageToggleButtonLabel: "Select Language",
                     detailsComingSoon: "More details coming soon for: ",
                     ctaComingSoon: "Information on how to get involved is coming soon!"
                 },
@@ -1121,6 +1277,7 @@
                     footerTagline: "开创性的道德AI发展",
                     themeToggleLabelLight: "切换到深色主题",
                     themeToggleLabelDark: "切换到浅色主题",
+                    languageToggleButtonLabel: "选择语言",
                     detailsComingSoon: "更多详情即将公布：",
                     ctaComingSoon: "如何参与的信息即将公布！"
                 },
@@ -1184,6 +1341,7 @@
                     footerTagline: "倫理的なAI開発のパイオニア",
                     themeToggleLabelLight: "ダークテーマに切り替え",
                     themeToggleLabelDark: "ライトテーマに切り替え",
+                    languageToggleButtonLabel: "言語を選択",
                     detailsComingSoon: "詳細は近日公開予定：",
                     ctaComingSoon: "参加方法に関する情報は近日公開予定です！"
                 }
@@ -1192,10 +1350,13 @@
             let currentLang = 'en'; // Default
             let currentTheme = 'light'; // Default
 
-            const languageSelector = document.getElementById('language-selector');
+            const languageToggleButton = document.getElementById('language-toggle-button');
+            const languageOptions = document.getElementById('language-options');
             const themeToggleButton = document.getElementById('theme-toggle-button');
             const themeIcon = document.getElementById('theme-icon');
             const htmlElement = document.documentElement;
+            const hamburgerMenu = document.getElementById('hamburger-menu'); // Hamburger button
+            const navLinks = document.getElementById('nav-links'); // Nav links container
 
             function applyLanguage(lang) {
                 if (!translations[lang]) {
@@ -1205,7 +1366,7 @@
                 currentLang = lang;
                 htmlElement.lang = lang;
                 localStorage.setItem('user-language', lang);
-                languageSelector.value = lang;
+                // languageToggleButton.textContent = lang.toUpperCase(); // Example
 
                 document.querySelectorAll('[data-lang-key]').forEach(element => {
                     const key = element.dataset.langKey;
@@ -1238,6 +1399,7 @@
                     }
                 });
                 themeToggleButton.setAttribute('aria-label', currentTheme === 'light' ? translations[currentLang].themeToggleLabelLight : translations[currentLang].themeToggleLabelDark);
+                languageToggleButton.setAttribute('aria-label', translations[currentLang].languageToggleButtonLabel);
             }
 
             function applyTheme(theme) {
@@ -1250,7 +1412,7 @@
                     document.body.classList.remove('dark-theme');
                     themeIcon.textContent = '☀️';
                 }
-                if (translations[currentLang]) {
+                if (translations[currentLang]) { // Ensure translations are loaded
                     themeToggleButton.setAttribute('aria-label', theme === 'light' ? translations[currentLang].themeToggleLabelLight : translations[currentLang].themeToggleLabelDark);
                 }
             }
@@ -1282,7 +1444,35 @@
             currentTheme = getInitialTheme();
             applyTheme(currentTheme);
 
-            languageSelector.addEventListener('change', (e) => applyLanguage(e.target.value));
+
+            // Hamburger Menu Toggle
+            hamburgerMenu.addEventListener('click', () => {
+                const isExpanded = hamburgerMenu.getAttribute('aria-expanded') === 'true' || false;
+                hamburgerMenu.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            });
+
+
+            // Language Selector Toggle
+            languageToggleButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                languageOptions.style.display = languageOptions.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            document.querySelectorAll('#language-options button').forEach(button => {
+                button.addEventListener('click', () => {
+                    applyLanguage(button.dataset.lang);
+                    languageOptions.style.display = 'none';
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!languageToggleButton.contains(event.target) && !languageOptions.contains(event.target)) {
+                    languageOptions.style.display = 'none';
+                }
+            });
+
+
             themeToggleButton.addEventListener('click', () => applyTheme(currentTheme === 'light' ? 'dark' : 'light'));
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
                 if (!localStorage.getItem('user-theme')) applyTheme(e.matches ? 'dark' : 'light');
@@ -1345,6 +1535,11 @@
                                 e.preventDefault();
                                 const offsetTop = targetElement.offsetTop - (document.querySelector('.navbar')?.offsetHeight || 0);
                                 window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                                // Close hamburger menu after click if open
+                                if (navLinks.classList.contains('active')) {
+                                    navLinks.classList.remove('active');
+                                    hamburgerMenu.setAttribute('aria-expanded', 'false');
+                                }
                             }
                         } catch (error) { console.warn("Smooth scroll target not found: ", href, error); }
                     }
