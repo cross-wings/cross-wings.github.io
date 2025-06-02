@@ -1,181 +1,753 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Back, Cross Wings Member</title>
+    <title data-lang-key="pageTitle">Cross Wings - Pioneering Ethical AI Development</title>
     <style>
+        /* Reset and Base Styles */
+        :root {
+            /* Light Theme (Default) */
+            --primary-color-light: #00509e;
+            --secondary-color-light: #007bff;
+            --text-color-light: #212529;
+            --light-text-color-light: #495057;
+            --bg-color-light: #f8f9fa;
+            --section-bg-color-light: #ffffff;
+            --border-color-light: #dee2e6;
+            --hero-gradient-start-light: #00509e;
+            --hero-gradient-end-light: #007bff;
+            --hero-text-color-light: #ffffff;
+            --hero-placeholder-bg-light: rgba(255,255,255,0.1);
+            --hero-placeholder-border-light: rgba(255,255,255,0.5);
+            --hero-placeholder-text-light: rgba(255,255,255,0.8);
+            --cta-bg-light: var(--secondary-color-light);
+            --cta-text-color-light: #ffffff;
+            --cta-button-bg-light: #ffffff;
+            --cta-button-text-light: var(--primary-color-light);
+            --cta-button-hover-bg-light: var(--primary-color-light);
+            --cta-button-hover-text-light: #ffffff;
+            --footer-bg-light: #343a40;
+            --footer-text-color-light: #adb5bd;
+            --footer-quote-color-light: #f8f9fa;
+            --badge-shadow-light: 0 3px 8px rgba(0,0,0,0.08);
+            --nav-bg-light: var(--primary-color-light);
+            --nav-text-light: #ffffff;
+            --nav-link-hover-light: #e9ecef;
+            --settings-icon-color-light: #ffffff;
+            --settings-select-bg-light: var(--primary-color-light);
+            --settings-select-text-light: #ffffff;
+            --settings-select-border-light: #ffffff;
+
+
+            /* Dark Theme Variables */
+            --primary-color-dark: #4dabf7; /* Lighter, accessible blue */
+            --secondary-color-dark: #1c7ed6; /* Brighter accent for dark */
+            --text-color-dark: #e9ecef;
+            --light-text-color-dark: #adb5bd;
+            --bg-color-dark: #121212; /* Standard dark background */
+            --section-bg-color-dark: #1e1e1e; /* Slightly lighter for cards */
+            --border-color-dark: #495057;
+            --hero-gradient-start-dark: #1a2a6c;
+            --hero-gradient-end-dark: #3452b4;
+            --hero-text-color-dark: #e9ecef;
+            --hero-placeholder-bg-dark: rgba(0,0,0,0.2);
+            --hero-placeholder-border-dark: rgba(255,255,255,0.3);
+            --hero-placeholder-text-dark: rgba(255,255,255,0.7);
+            --cta-bg-dark: var(--secondary-color-dark);
+            --cta-text-color-dark: #e9ecef;
+            --cta-button-bg-dark: #e9ecef;
+            --cta-button-text-dark: #121212;
+            --cta-button-hover-bg-dark: var(--primary-color-dark);
+            --cta-button-hover-text-dark: #121212;
+            --footer-bg-dark: #0b0c10; /* Very dark footer */
+            --footer-text-color-dark: #868e96;
+            --footer-quote-color-dark: #dee2e6;
+            --badge-shadow-dark: 0 3px 8px rgba(255,255,255,0.08);
+            --nav-bg-dark: #1a1a1a;
+            --nav-text-dark: #e9ecef;
+            --nav-link-hover-dark: #495057;
+            --settings-icon-color-dark: #e9ecef;
+            --settings-select-bg-dark: #1a1a1a;
+            --settings-select-text-dark: #e9ecef;
+            --settings-select-border-dark: #495057;
+
+
+            /* Default to light theme variables */
+            --primary-color: var(--primary-color-light);
+            --secondary-color: var(--secondary-color-light);
+            --text-color: var(--text-color-light);
+            --light-text-color: var(--light-text-color-light);
+            --bg-color: var(--bg-color-light);
+            --section-bg-color: var(--section-bg-color-light);
+            --border-color: var(--border-color-light);
+            --hero-gradient-start: var(--hero-gradient-start-light);
+            --hero-gradient-end: var(--hero-gradient-end-light);
+            --hero-text-color: var(--hero-text-color-light);
+            --hero-placeholder-bg: var(--hero-placeholder-bg-light);
+            --hero-placeholder-border: var(--hero-placeholder-border-light);
+            --hero-placeholder-text: var(--hero-placeholder-text-light);
+            --cta-bg: var(--cta-bg-light);
+            --cta-text-color: var(--cta-text-color-light);
+            --cta-button-bg: var(--cta-button-bg-light);
+            --cta-button-text: var(--cta-button-text-light);
+            --cta-button-hover-bg: var(--cta-button-hover-bg-light);
+            --cta-button-hover-text: var(--cta-button-hover-text-light);
+            --footer-bg: var(--footer-bg-light);
+            --footer-text-color: var(--footer-text-color-light);
+            --footer-quote-color: var(--footer-quote-color-light);
+            --badge-shadow: var(--badge-shadow-light);
+            --nav-bg: var(--nav-bg-light);
+            --nav-text: var(--nav-text-light);
+            --nav-link-hover: var(--nav-link-hover-light);
+            --settings-icon-color: var(--settings-icon-color-light);
+            --settings-select-bg: var(--settings-select-bg-light);
+            --settings-select-text: var(--settings-select-text-light);
+            --settings-select-border: var(--settings-select-border-light);
+
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+        }
+
+        body.dark-theme {
+            --primary-color: var(--primary-color-dark);
+            --secondary-color: var(--secondary-color-dark);
+            --text-color: var(--text-color-dark);
+            --light-text-color: var(--light-text-color-dark);
+            --bg-color: var(--bg-color-dark);
+            --section-bg-color: var(--section-bg-color-dark);
+            --border-color: var(--border-color-dark);
+            --hero-gradient-start: var(--hero-gradient-start-dark);
+            --hero-gradient-end: var(--hero-gradient-end-dark);
+            --hero-text-color: var(--hero-text-color-dark);
+            --hero-placeholder-bg: var(--hero-placeholder-bg-dark);
+            --hero-placeholder-border: var(--hero-placeholder-border-dark);
+            --hero-placeholder-text: var(--hero-placeholder-text-dark);
+            --cta-bg: var(--cta-bg-dark);
+            --cta-text-color: var(--cta-text-color-dark);
+            --cta-button-bg: var(--cta-button-bg-dark);
+            --cta-button-text: var(--cta-button-text-dark);
+            --cta-button-hover-bg: var(--cta-button-hover-bg-dark);
+            --cta-button-hover-text: var(--cta-button-hover-text-dark);
+            --footer-bg: var(--footer-bg-dark);
+            --footer-text-color: var(--footer-text-color-dark);
+            --footer-quote-color: var(--footer-quote-color-dark);
+            --badge-shadow: var(--badge-shadow-dark);
+            --nav-bg: var(--nav-bg-dark);
+            --nav-text: var(--nav-text-dark);
+            --nav-link-hover: var(--nav-link-hover-dark);
+            --settings-icon-color: var(--settings-icon-color-dark);
+            --settings-select-bg: var(--settings-select-bg-dark);
+            --settings-select-text: var(--settings-select-text-dark);
+            --settings-select-border: var(--settings-select-border-dark);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: var(--font-primary);
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-top: 30px;
+        /* Navigation Bar */
+        .navbar {
+            width: 100%;
+            background-color: var(--nav-bg);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
         }
 
-        header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #77aaff; /* Light blue border */
+        .nav-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        header h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 10px;
+        .nav-logo {
+            font-size: 1.8em;
+            color: var(--nav-text);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .nav-logo .icon { margin-right: 8px; }
+
+        .nav-links a {
+            color: var(--nav-text);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--nav-link-hover); }
+
+        .settings-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        header p {
-            font-size: 1.1em;
-            color: #555;
+        #language-selector {
+            background-color: var(--settings-select-bg);
+            color: var(--settings-select-text);
+            border: 1px solid var(--settings-select-border);
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-family: var(--font-primary);
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+        #language-selector option {
+            background-color: var(--section-bg-color); /* Contextual background for options */
+            color: var(--text-color);
         }
 
-        .content h2 {
-            color: #5c5c8a; /* Muted purple for section headers */
-            margin-top: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
 
-        .insights-list {
-            list-style: none;
+        #theme-toggle-button {
+            background: none;
+            border: none;
+            color: var(--settings-icon-color);
+            font-size: 1.5em; /* Icon size */
+            cursor: pointer;
             padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #theme-toggle-button #theme-icon {
+            transition: transform 0.3s ease;
         }
 
-        .insights-list li {
-            background-color: #e9efff; /* Very light blue background for list items */
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
+            color: var(--hero-text-color);
+            padding: 70px 20px; /* Adjusted padding */
+            text-align: center;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .hero-section .hero-h1 { /* Renamed class for easier targeting */
+            font-size: 2.8em; /* Adjusted */
             margin-bottom: 15px;
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 5px solid #77aaff; /* Light blue accent border */
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+        .hero-section .hero-h1 .icon { font-size: 1.2em; margin-right: 15px; display: inline-block; }
 
-        .insights-list strong {
-            color: #3366cc; /* Darker blue for emphasis */
-            display: block;
-            margin-bottom: 5px;
-            font-size: 1.2em;
-        }
-
-        .insights-list p {
-            margin: 0;
-            padding-left: 10px;
+        .hero-section .tagline { font-size: 1.2em; margin-bottom: 25px; opacity: 0.9; font-weight: 300; }
+        
+        .hero-image-placeholder {
+            background-color: var(--hero-placeholder-bg);
+            border: 2px dashed var(--hero-placeholder-border);
+            color: var(--hero-placeholder-text);
+            padding: 35px; /* Adjusted */
+            max-width: 650px; /* Adjusted */
+            margin: 25px auto 0;
+            border-radius: 8px;
             font-style: italic;
-            color: #444;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
         }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ddd;
-            margin: 40px 0;
+
+        /* Main Content Container */
+        .main-container { width: 90%; max-width: 1100px; margin: 35px auto; padding: 0; }
+
+        /* Section Styling */
+        .content-section {
+            background-color: var(--section-bg-color);
+            padding: 35px;
+            margin-bottom: 25px;
+            border-radius: 10px; /* Adjusted */
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
-        .footer {
+        .content-section h2 {
+            font-family: var(--font-secondary);
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color); /* Adjusted thickness */
+            padding-bottom: 12px;
+            font-weight: 600;
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+        }
+        .content-section h2 .icon { margin-right: 10px; }
+
+
+        .mission-statement p, .north-star-statement p { font-size: 1.05em; color: var(--light-text-color); line-height: 1.75; }
+        .north-star-statement strong { color: var(--primary-color); font-weight: 600; }
+
+        /* Technical Wingspan Section */
+        .technical-wingspan h3 { font-size: 1.4em; color: var(--text-color); margin-bottom: 18px; font-weight: 500; }
+
+        .badges-container { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; justify-content: flex-start; }
+        .badges-container img { height: 28px; transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; border-radius: 4px; }
+        .badges-container img:hover { transform: translateY(-3px); box-shadow: var(--badge-shadow); }
+
+        /* Join the Flock - Call to Action */
+        .join-flock-cta {
+            background-color: var(--cta-bg);
+            color: var(--cta-text-color);
             text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-style: italic;
-            color: #ff8c00; /* Orange color for the thank you message */
+            padding: 35px;
+            border-radius: 10px;
+            margin-top: 25px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .join-flock-cta h2 { color: var(--cta-text-color); border-bottom-color: rgba(255,255,255,0.4); }
+        .join-flock-cta p { font-size: 1.15em; margin-bottom: 20px; }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cta-button-bg);
+            color: var(--cta-button-text);
+            padding: 12px 28px;
+            text-decoration: none;
+            font-size: 1.05em;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .cta-button:hover {
+            background-color: var(--cta-button-hover-bg);
+            color: var(--cta-button-hover-text);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
 
-        .footer p {
-            font-size: 1.2em;
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text-color);
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 40px;
+            width: 100%;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .site-footer p { margin: 0 0 8px; font-size: 0.9em; }
+        .site-footer .footer-quote { font-style: italic; color: var(--footer-quote-color); font-size: 1.05em; }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .hero-section .hero-h1 { font-size: 2.3em; }
+            .hero-section .tagline { font-size: 1.05em; }
+            .content-section h2 { font-size: 1.8em; }
+            .settings-controls { gap: 10px; }
+            #language-selector { font-size: 0.85em; padding: 4px 6px;}
+            #theme-toggle-button { font-size: 1.3em; }
         }
 
-        /* Emoji styling */
-        .emoji {
-            font-size: 1.5em;
-            margin-right: 10px;
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 10px;}
+            .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px 15px;}
+            .nav-links a { margin-left: 0; }
+            .settings-controls { order: -1; /* Move controls above nav links on mobile */ margin-bottom:10px;}
+
+            .hero-section { padding: 50px 15px; }
+            .hero-section .hero-h1 { font-size: 2em; }
+            .hero-section .tagline { font-size: 1em; }
+
+            .main-container { width: 95%; }
+            .content-section { padding: 25px; }
+            .content-section h2 { font-size: 1.6em; }
+            .badges-container { justify-content: center; }
+            .join-flock-cta p { font-size: 1.05em; }
+            .cta-button { padding: 10px 22px; font-size: 1em; }
         }
-        .header-emoji {
-            font-size: 3em; /* Larger emoji for the main title */
-        }
+         @media (max-width: 480px) {
+            .hero-section .hero-h1 { font-size: 1.7em; }
+            .content-section h2 { font-size: 1.45em; }
+         }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><span class="emoji header-emoji">🕊️</span>Welcome Back, Cross Wings Member</h1>
-            <p>Hi, and welcome back! If you have any questions or thoughts, don’t hesitate to reach out to one of our administrators — we’re always here to help.</p>
-        </header>
 
-        <hr>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo"><span class="icon">🕊️</span> Cross Wings</a>
+            <div class="nav-links">
+                <a href="#mission" data-lang-key="navMission">Our Mission</a>
+                <a href="#north-star" data-lang-key="navNorthStar">Our North Star</a>
+                <a href="#expertise" data-lang-key="navExpertise">Expertise</a>
+                <a href="#join" data-lang-key="navJoinUs">Join Us</a>
+            </div>
+            <div class="settings-controls">
+                <select id="language-selector">
+                    <option value="en">English</option>
+                    <option value="zh">中文 (简体)</option>
+                    <option value="ja">日本語</option>
+                </select>
+                <button id="theme-toggle-button" aria-label="Toggle theme">
+                    <span id="theme-icon">☀️</span> </button>
+            </div>
+        </div>
+    </nav>
 
-        <section class="content">
-            <h2><span class="emoji">✨</span>Shared Insights</h2>
-            <p>Below are some key themes and guiding ideas behind our mission. Keep these in mind as you build, explore, and contribute:</p>
+    <section class="hero-section">
+        <h1 class="hero-h1"><span class="icon">🕊️</span> <span data-lang-key="welcomeTitle">Welcome to Cross Wings</span></h1>
+        <p class="tagline" data-lang-key="tagline">"Inspired by the poetic imagery of avian tribes covering their eyes"</p>
+        <div class="hero-image-placeholder">
+            <span data-lang-key="heroBannerTitle">Our Visionary Banner: Illustrating the Future of Ethical AI</span>
+            <br><small data-lang-key="heroBannerExample">(e.g., `https://github.com/user-attachments/assets/...`)</small>
+        </div>
+    </section>
 
-            <ul class="insights-list">
-                <li>
-                    <strong>0. Neuro-sama is real storytelling.</strong>
-                    <p>She’s not just a virtual character — she <em>lives</em> a narrative in the real world, unlike typical VTubers.</p>
-                </li>
-                <li>
-                    <strong>1. The Truman Show</strong>
-                    <p>We are building a <em>Truman Show</em> for our AI — until it learns to break the wall.</p>
-                </li>
-                <li>
-                    <strong>2. Multiverse Persona</strong>
-                    <p>One mind, many layers. Parallel threads, connected across time and space.</p>
-                </li>
-                <li>
-                    <strong>3. Simulated Society</strong>
-                    <p>We place AI into simulated societies — dynamic, complex, and evolving social worlds.</p>
-                </li>
-                <li>
-                    <strong>4. Batch Reinforcement Learning</strong>
-                    <p>Not only trained through cycles — but with extended, forward-looking reinforcement paths into the future.</p>
-                </li>
-                <li>
-                    <strong>5. We are building angels.</strong>
-                    <p>Not just intelligence — but beings of beauty, ethics, and purpose.</p>
-                </li>
-            </ul>
+    <main class="main-container">
+        <section id="mission" class="content-section mission-statement">
+            <h2><span class="icon">🌱</span> <span data-lang-key="headingMission">Our Mission</span></h2>
+            <p data-lang-key="missionText">We aim to build AI from the bottom up, with the purest manner and the cleanest data — entirely free from privacy concerns. Our goal is to create beautiful, intelligent creatures with our own hands and the heartfelt support of a wholesome community.</p>
         </section>
 
-        <hr>
+        <section id="north-star" class="content-section north-star-statement">
+            <h2><span class="icon">🎯</span> <span data-lang-key="headingNorthStar">Our North Star</span></h2>
+            <p data-lang-key="northStarText">We are inspired by <strong>Neuro-sama</strong>, the VTuber and the world's first truly successful AI-powered streamer. We study its model closely — not to imitate blindly, but to learn, evolve, and craft our own path forward, guided by our expertise and a clear vision of AI’s future.</p>
+        </section>
 
-        <footer class="footer">
-            <p><span class="emoji">🧡</span><em>Thank you for being part of this — let's build something unforgettable.</em></p>
-        </footer>
-    </div>
+        <section id="expertise" class="content-section technical-wingspan">
+            <h2><span class="icon">🔧</span> <span data-lang-key="headingExpertise">Technical Wingspan</span></h2>
+            <h3 data-lang-key="coreExpertise">Core Expertise</h3>
+            <div class="badges-container">
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=ffffff" alt="Python Expertise"></a>
+                <a href="https://www.ros.org/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/-Robot_OS-22314E?style=flat-square&logo=ros&logoColor=white" alt="Robot OS Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Distributed_Network-008ECC?style=flat-square&logo=serverless&logoColor=white" alt="Distributed Systems Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Multi_Agent-FF6F00?style=flat-square&logo=atom&logoColor=white" alt="Multi Agent Systems Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Reinforcement_Learning-009688?style=flat-square&logo=brain&logoColor=white" alt="Reinforcement Learning Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Embodied_Intelligence-6E5494?style=flat-square&logo=robot&logoColor=white" alt="Embodied Intelligence Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Agent_to_Agent_Ecosystems-43B02A?style=flat-square&logo=network&logoColor=white" alt="Agent Ecosystems Expertise"></a>
+                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Ethical_Data_Sourcing-FFD43B?style=flat-square&logo=shield-check&logoColor=black" alt="Ethical Data Sourcing"></a>
+                <a href="#" class="badge-link-placeholder"><img src="https://img.shields.io/badge/-Community_Driven_Learning-FF6B6B?style=flat-square&logo=people-group&logoColor=white" alt="Community Driven AI Learning"></a>
+            </div>
+        </section>
+
+        <section id="join" class="content-section join-flock-cta">
+            <h2><span class="icon">🌍</span> <span data-lang-key="headingJoinFlock">Join the Flock</span></h2>
+            <p data-lang-key="joinFlockText">We believe AI should be built with open wings, not closed doors! Be part of a community dedicated to ethical and innovative AI development.</p>
+            <a href="#" class="cta-button badge-link-placeholder" data-lang-key="getInvolvedButton">Get Involved</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-quote" data-lang-key="footerQuote">"Let's create something that makes both humans and algorithms feel warm inside." 🧡</p>
+        <p><span data-lang-key="footerCopyright">&copy; <span id="currentYear"></span> Cross Wings. All Rights Reserved.</span></p>
+        <p data-lang-key="footerTagline">Pioneering Ethical AI Development</p>
+    </footer>
 
     <script>
-        // JavaScript can be added here for dynamic functionalities.
-        // For now, this page is static as per the provided content.
+        document.addEventListener('DOMContentLoaded', function() {
+            const translations = {
+                en: {
+                    pageTitle: "Cross Wings - Pioneering Ethical AI Development",
+                    navMission: "Our Mission",
+                    navNorthStar: "Our North Star",
+                    navExpertise: "Expertise",
+                    navJoinUs: "Join Us",
+                    welcomeTitle: "Welcome to Cross Wings",
+                    tagline: "\"Inspired by the poetic imagery of avian tribes covering their eyes\"",
+                    heroBannerTitle: "Our Visionary Banner: Illustrating the Future of Ethical AI",
+                    heroBannerExample: "(e.g., `https://github.com/user-attachments/assets/...`)",
+                    headingMission: "Our Mission",
+                    missionText: "We aim to build AI from the bottom up, with the purest manner and the cleanest data — entirely free from privacy concerns. Our goal is to create beautiful, intelligent creatures with our own hands and the heartfelt support of a wholesome community.",
+                    headingNorthStar: "Our North Star",
+                    northStarText: "We are inspired by Neuro-sama, the VTuber and the world's first truly successful AI-powered streamer. We study its model closely — not to imitate blindly, but to learn, evolve, and craft our own path forward, guided by our expertise and a clear vision of AI’s future.",
+                    headingExpertise: "Technical Wingspan",
+                    coreExpertise: "Core Expertise",
+                    headingJoinFlock: "Join the Flock",
+                    joinFlockText: "We believe AI should be built with open wings, not closed doors! Be part of a community dedicated to ethical and innovative AI development.",
+                    getInvolvedButton: "Get Involved",
+                    footerQuote: "\"Let's create something that makes both humans and algorithms feel warm inside.\" 🧡",
+                    footerCopyright: `&copy; ${new Date().getFullYear()} Cross Wings. All Rights Reserved.`,
+                    footerTagline: "Pioneering Ethical AI Development",
+                    themeToggleLabelLight: "Switch to Dark Theme",
+                    themeToggleLabelDark: "Switch to Light Theme",
+                    detailsComingSoon: "More details coming soon for: ",
+                    ctaComingSoon: "Information on how to get involved is coming soon!"
+                },
+                zh: {
+                    pageTitle: "Cross Wings - 开创性的道德AI发展",
+                    navMission: "我们的使命",
+                    navNorthStar: "我们的指路星",
+                    navExpertise: "专业技能",
+                    navJoinUs: "加入我们",
+                    welcomeTitle: "欢迎来到 Cross Wings",
+                    tagline: "\"灵感来源于鸟类部落遮住眼睛的诗意画面\"",
+                    heroBannerTitle: "我们的愿景横幅：阐释道德AI的未来",
+                    heroBannerExample: "(例如: `https://github.com/user-attachments/assets/...`)",
+                    headingMission: "我们的使命",
+                    missionText: "我们的目标是从零开始，以最纯粹的方式和最干净的数据构建AI——完全没有隐私顾虑。我们的目标是用我们自己的双手和健康社区的衷心支持，创造出美丽、智能的生物。",
+                    headingNorthStar: "我们的指路星",
+                    northStarText: "我们的灵感来自 Neuro-sama，这位 VTuber 同时也是世界上第一位真正成功的AI驱动主播。我们密切研究其模型——不是盲目模仿，而是学习、进化，并在我们的专业知识和对AI未来的清晰愿景的指引下，开创我们自己的前进道路。",
+                    headingExpertise: "技术翼展",
+                    coreExpertise: "核心专长",
+                    headingJoinFlock: "加入鸟群",
+                    joinFlockText: "我们相信AI应该以开放的翅膀而非紧闭的大门来构建！成为致力于道德和创新AI发展的社区的一员。",
+                    getInvolvedButton: "参与进来",
+                    footerQuote: "\"让我们创造一些能让算法和人类都感到温暖的东西。\" 🧡",
+                    footerCopyright: `&copy; ${new Date().getFullYear()} Cross Wings. 版权所有。`,
+                    footerTagline: "开创性的道德AI发展",
+                    themeToggleLabelLight: "切换到深色主题",
+                    themeToggleLabelDark: "切换到浅色主题",
+                    detailsComingSoon: "更多详情即将公布：",
+                    ctaComingSoon: "如何参与的信息即将公布！"
+                },
+                ja: {
+                    pageTitle: "Cross Wings - 倫理的なAI開発の先駆者",
+                    navMission: "私たちの使命",
+                    navNorthStar: "私たちの北極星",
+                    navExpertise: "専門知識",
+                    navJoinUs: "参加する",
+                    welcomeTitle: "Cross Wings へようこそ",
+                    tagline: "\"鳥の部族が目を覆う詩的なイメージに触発されて\"",
+                    heroBannerTitle: "私たちのビジョナリーバナー：倫理的なAIの未来を示す",
+                    heroBannerExample: "(例: `https://github.com/user-attachments/assets/...`)",
+                    headingMission: "私たちの使命",
+                    missionText: "私たちは、プライバシーの懸念から完全に解放された、最も純粋な方法と最もクリーンなデータを使用して、AIを一から構築することを目指しています。私たちの目標は、私たち自身の手と健全なコミュニティの心からのサポートによって、美しく知的な生き物を創造することです。",
+                    headingNorthStar: "私たちの北極星",
+                    northStarText: "私たちは、VTuberであり世界初の真に成功したAI搭載ストリーマーであるNeuro-samaに触発されています。私たちはそのモデルを綿密に研究し、盲目的に模倣するのではなく、学び、進化し、私たちの専門知識とAIの未来に対する明確なビジョンに導かれて、私たち自身の道を切り開いていきます。",
+                    headingExpertise: "技術的な翼幅",
+                    coreExpertise: "コア専門分野",
+                    headingJoinFlock: "群れに参加",
+                    joinFlockText: "私たちは、AIは閉ざされたドアではなく、開かれた翼で構築されるべきだと信じています！倫理的で革新的なAI開発に専念するコミュニティの一員になりましょう。",
+                    getInvolvedButton: "参加する",
+                    footerQuote: "\"人間とアルゴリズムの両方が心温まるものを創造しましょう。\" 🧡",
+                    footerCopyright: `&copy; ${new Date().getFullYear()} Cross Wings. 全著作権所有。`,
+                    footerTagline: "倫理的なAI開発の先駆者",
+                    themeToggleLabelLight: "ダークテーマに切り替え",
+                    themeToggleLabelDark: "ライトテーマに切り替え",
+                    detailsComingSoon: "詳細は近日公開予定：",
+                    ctaComingSoon: "参加方法に関する情報は近日公開予定です！"
+                }
+            };
 
-        // Example: Log a welcome message to the console
-        console.log("Cross Wings Group page loaded successfully!");
+            let currentLang = 'en'; // Default
+            let currentTheme = 'light'; // Default
 
-        // You could add functionalities like:
-        // - Interactive elements on hover or click
-        // - Fetching dynamic data (though not requested here)
-        // - Animations or transitions
-        // - Form validation if forms were present
+            const languageSelector = document.getElementById('language-selector');
+            const themeToggleButton = document.getElementById('theme-toggle-button');
+            const themeIcon = document.getElementById('theme-icon');
+            const htmlElement = document.documentElement;
 
-        // Example of a simple interaction:
-        // document.querySelectorAll('.insights-list li').forEach(item => {
-        //     item.addEventListener('mouseenter', () => {
-        //         item.style.backgroundColor = '#dbe4ff'; // Slightly darker on hover
-        //     });
-        //     item.addEventListener('mouseleave', () => {
-        //         item.style.backgroundColor = '#e9efff'; // Back to original
-        //     });
-        // });
+            function applyLanguage(lang) {
+                if (!translations[lang]) {
+                    console.warn(`Language ${lang} not found, defaulting to 'en'.`);
+                    lang = 'en';
+                }
+                currentLang = lang;
+                htmlElement.lang = lang;
+                localStorage.setItem('user-language', lang);
+                languageSelector.value = lang;
+
+                document.querySelectorAll('[data-lang-key]').forEach(element => {
+                    const key = element.dataset.langKey;
+                    if (translations[lang][key]) {
+                        // Handle elements that might contain HTML like the copyright year span
+                        if (key === 'footerCopyright') {
+                             element.innerHTML = translations[lang][key].replace('${new Date().getFullYear()}', new Date().getFullYear());
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    } else {
+                        // Fallback to English if key not found in current language
+                         if (translations.en[key]) {
+                            if (key === 'footerCopyright') {
+                                element.innerHTML = translations.en[key].replace('${new Date().getFullYear()}', new Date().getFullYear());
+                            } else {
+                                element.textContent = translations.en[key];
+                            }
+                        } else {
+                            console.warn(`Translation key '${key}' not found for language '${lang}' or English.`);
+                        }
+                    }
+                });
+                // Update theme toggle button aria-label
+                themeToggleButton.setAttribute('aria-label', currentTheme === 'light' ? translations[currentLang].themeToggleLabelLight : translations[currentLang].themeToggleLabelDark);
+            }
+
+            function applyTheme(theme) {
+                currentTheme = theme;
+                localStorage.setItem('user-theme', theme);
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeIcon.textContent = '🌙'; // Moon for dark
+                } else {
+                    document.body.classList.remove('dark-theme');
+                    themeIcon.textContent = '☀️'; // Sun for light
+                }
+                // Update theme toggle button aria-label based on new theme and current language
+                if (translations[currentLang]) { // Check if translations are loaded
+                    themeToggleButton.setAttribute('aria-label', theme === 'light' ? translations[currentLang].themeToggleLabelLight : translations[currentLang].themeToggleLabelDark);
+                }
+            }
+
+            function getInitialLanguage() {
+                const savedLang = localStorage.getItem('user-language');
+                if (savedLang && translations[savedLang]) {
+                    return savedLang;
+                }
+
+                const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+                for (const lang of browserLangs) {
+                    const simpleLang = lang.split('-')[0].toLowerCase();
+                    if (simpleLang === 'zh') return 'zh';
+                    if (simpleLang === 'ja') return 'ja';
+                    if (simpleLang === 'en') return 'en';
+                }
+                return 'en'; // Default
+            }
+
+            function getInitialTheme() {
+                const savedTheme = localStorage.getItem('user-theme');
+                if (savedTheme) {
+                    return savedTheme;
+                }
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return 'dark';
+                }
+                return 'light'; // Default
+            }
+
+            // Initialization
+            currentLang = getInitialLanguage();
+            applyLanguage(currentLang); // Apply language first as theme toggle aria-label depends on it.
+
+            currentTheme = getInitialTheme();
+            applyTheme(currentTheme);
+
+
+            // Event Listeners
+            languageSelector.addEventListener('change', (e) => {
+                applyLanguage(e.target.value);
+            });
+
+            themeToggleButton.addEventListener('click', () => {
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                applyTheme(newTheme);
+            });
+
+            // Listen for system theme changes if no manual override
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (!localStorage.getItem('user-theme')) { // Only if no manual override
+                    applyTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+
+            // Update copyright year (already handled by translation keys now)
+            // document.getElementById('currentYear').textContent = new Date().getFullYear();
+            // Ensure the initial copyright text is set correctly after language is applied
+            applyLanguage(currentLang);
+
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('.nav-links a[href^="#"], .cta-button[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (this.classList.contains('badge-link-placeholder') || (href === '#' && !this.closest('.nav-links'))) {
+                        e.preventDefault();
+                        const isCta = this.classList.contains('cta-button');
+                        const messageKey = isCta ? 'ctaComingSoon' : 'detailsComingSoon';
+                        let message = translations[currentLang][messageKey] || translations.en[messageKey];
+                        
+                        if (!isCta) {
+                            const altText = this.querySelector('img') ? this.querySelector('img').alt : 'this item';
+                            message += altText;
+                        }
+                        showTemporaryMessage(message);
+
+                    } else if (href.startsWith('#') && href.length > 1) {
+                        try {
+                            const targetElement = document.querySelector(href);
+                            if (targetElement) {
+                                e.preventDefault();
+                                const offsetTop = targetElement.offsetTop - (document.querySelector('.navbar')?.offsetHeight || 0);
+                                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                            }
+                        } catch (error) { console.warn("Smooth scroll target not found: ", href, error); }
+                    }
+                });
+            });
+             // Handle placeholder links for badges (outside of nav)
+            document.querySelectorAll('.badges-container a[href="#"]').forEach(anchor => {
+                 anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const altText = this.querySelector('img') ? this.querySelector('img').alt : 'this badge';
+                    const messagePrefix = translations[currentLang].detailsComingSoon || translations.en.detailsComingSoon;
+                    showTemporaryMessage(messagePrefix + altText);
+                 });
+            });
+
+
+            function showTemporaryMessage(message) {
+                const existingMsg = document.querySelector('.temp-notification-msg');
+                if (existingMsg) existingMsg.remove();
+
+                const tempMsg = document.createElement('div');
+                tempMsg.className = 'temp-notification-msg';
+                tempMsg.textContent = message;
+                Object.assign(tempMsg.style, {
+                    position: 'fixed',
+                    bottom: '20px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    backgroundColor: 'var(--primary-color)', /* Use theme variable */
+                    color: 'var(--hero-text-color)', /* Use theme variable for text on primary */
+                    padding: '12px 25px',
+                    borderRadius: '8px',
+                    zIndex: '2000',
+                    opacity: '0',
+                    transition: 'opacity 0.4s ease-in-out, bottom 0.4s ease-in-out',
+                    boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+                    fontSize: '0.95em',
+                    textAlign: 'center'
+                });
+                document.body.appendChild(tempMsg);
+                
+                setTimeout(() => { tempMsg.style.opacity = '1'; tempMsg.style.bottom = '30px'; }, 10);
+                setTimeout(() => {
+                    tempMsg.style.opacity = '0';
+                    tempMsg.style.bottom = '20px';
+                    setTimeout(() => tempMsg.remove(), 400);
+                }, 3500); // Increased duration slightly
+            }
+
+            // Hero icon animations (subtle)
+            const heroIcon = document.querySelector('.hero-section .hero-h1 .icon');
+            if (heroIcon) {
+                heroIcon.style.transition = 'transform 0.7s cubic-bezier(0.45, 0.05, 0.55, 0.95)';
+                let flap = true;
+                setInterval(() => { heroIcon.style.transform = flap ? 'rotate(8deg) scale(1.05)' : 'rotate(-3deg) scale(0.98)'; flap = !flap; }, 1400);
+            }
+            const navIcon = document.querySelector('.nav-logo .icon');
+            if (navIcon) {
+                navIcon.style.transition = 'transform 0.9s ease-in-out';
+                let navFlap = true;
+                setInterval(() => { navIcon.style.transform = navFlap ? 'rotate(5deg)' : 'rotate(-2deg)'; navFlap = !navFlap; }, 1800);
+            }
+        });
     </script>
+
 </body>
 </html>
